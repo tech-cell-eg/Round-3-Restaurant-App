@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../core/utils/app_color.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/text_form_feild.dart';
+import 'package:food_app/core/ui/buttons.dart';
+import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/features/auth/presentation/widgets/text_form_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -136,7 +136,8 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(height: 32),
 
                     // Login Button
-                    AppButton(text: 'LOG IN', onPressed: () {}),
+                    Buttons.fill(onPressed: () {}, label: 'LOG IN'),
+                    // AppButton(text: 'LOG IN', onPressed: () {}),
                     const SizedBox(height: 32),
 
                     // Sign up prompt

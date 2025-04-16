@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/utils/app_color.dart';
-import '../../cubit/auth/auth_cubit.dart';
-import 'custom_button.dart';
-import 'text_form_feild.dart';
+import 'package:food_app/core/ui/buttons.dart';
+import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/features/auth/cubit/auth/auth_cubit.dart';
+import 'package:food_app/features/auth/presentation/widgets/text_form_field.dart';
 
 class ForgotPasswordForm extends StatefulWidget {
   const ForgotPasswordForm({super.key});
@@ -30,10 +30,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
         children: [
           const Text(
             'Please enter your email to receive a reset code',
-            style: TextStyle(
-              fontSize: 16,
-              color: AppColor.kBlackColor,
-            ),
+            style: TextStyle(fontSize: 16, color: AppColor.kBlackColor),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 32),
@@ -47,7 +44,9 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
               if (value == null || value.isEmpty) {
                 return 'Please enter your email';
               }
-              if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+              if (!RegExp(
+                r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+              ).hasMatch(value)) {
                 return 'Please enter a valid email';
               }
               return null;
@@ -57,9 +56,9 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
           BlocConsumer<AuthCubit, AuthState>(
             listener: (context, state) {
               if (state is AuthError) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(state.message)),
-                );
+                ScaffoldMessenger.of(
+                  context,
+                ).showSnackBar(SnackBar(content: Text(state.message)));
               } else if (state is AuthSuccess) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
@@ -70,17 +69,28 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
               }
             },
             builder: (context, state) {
-              return AppButton(
-                text: 'SEND CODE',
+              return Buttons.fill(
+                label: 'SEND CODE',
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    context
-                        .read<AuthCubit>()
-                        .forgotPassword(_emailController.text.trim());
+                    context.read<AuthCubit>().forgotPassword(
+                      _emailController.text.trim(),
+                    );
                   }
                 },
-                isLoading: state is AuthLoading,
               );
+
+              // AppButton(
+              //   text: 'SEND CODE',
+              //   onPressed: () {
+              //     if (_formKey.currentState!.validate()) {
+              //       context
+              //           .read<AuthCubit>()
+              //           .forgotPassword(_emailController.text.trim());
+              //     }
+              //   },
+              //   isLoading: state is AuthLoading,
+              // );
             },
           ),
           const SizedBox(height: 32),
@@ -95,23 +105,49 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']
-                      .map((char) => Text(char))
-                      .toList(),
+                  children:
+                      [
+                        'Q',
+                        'W',
+                        'E',
+                        'R',
+                        'T',
+                        'Y',
+                        'U',
+                        'I',
+                        'O',
+                        'P',
+                      ].map((char) => Text(char)).toList(),
                 ),
                 const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L']
-                      .map((char) => Text(char))
-                      .toList(),
+                  children:
+                      [
+                        'A',
+                        'S',
+                        'D',
+                        'F',
+                        'G',
+                        'H',
+                        'J',
+                        'K',
+                        'L',
+                      ].map((char) => Text(char)).toList(),
                 ),
                 const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
-                      .map((char) => Text(char))
-                      .toList(),
+                  children:
+                      [
+                        'Z',
+                        'X',
+                        'C',
+                        'V',
+                        'B',
+                        'N',
+                        'M',
+                      ].map((char) => Text(char)).toList(),
                 ),
                 const SizedBox(height: 8),
                 Row(

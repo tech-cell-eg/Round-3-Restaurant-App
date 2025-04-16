@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../core/utils/app_color.dart';
-import '../../cubit/auth/auth_cubit.dart';
-import 'custom_button.dart';
-import 'text_form_feild.dart';
+import 'package:food_app/core/ui/buttons.dart';
+import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/features/auth/cubit/auth/auth_cubit.dart';
+import 'package:food_app/features/auth/presentation/widgets/text_form_field.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -43,7 +43,9 @@ class _LoginFormState extends State<LoginForm> {
               if (value == null || value.isEmpty) {
                 return 'Please enter your email';
               }
-              if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+              if (!RegExp(
+                r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+              ).hasMatch(value)) {
                 return 'Please enter a valid email';
               }
               return null;
@@ -56,9 +58,8 @@ class _LoginFormState extends State<LoginForm> {
             controller: _passwordController,
             obscureText: _obscurePassword,
             prefixIcon: Icons.lock,
-            suffixIcon: _obscurePassword
-                ? Icons.visibility_off
-                : Icons.visibility,
+            suffixIcon:
+                _obscurePassword ? Icons.visibility_off : Icons.visibility,
             onSuffixIconPressed: () {
               setState(() {
                 _obscurePassword = !_obscurePassword;
@@ -91,10 +92,7 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                   const Text(
                     'Remember me',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: AppColor.kBlackColor,
-                    ),
+                    style: TextStyle(fontSize: 14, color: AppColor.kBlackColor),
                   ),
                 ],
               ),
@@ -104,10 +102,7 @@ class _LoginFormState extends State<LoginForm> {
                 },
                 child: const Text(
                   'Forgot Password',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: AppColor.kBlackColor,
-                  ),
+                  style: TextStyle(fontSize: 14, color: AppColor.kBlackColor),
                 ),
               ),
             ],
@@ -116,35 +111,31 @@ class _LoginFormState extends State<LoginForm> {
           BlocConsumer<AuthCubit, AuthState>(
             listener: (context, state) {
               if (state is AuthError) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(state.message)),
-                );
+                ScaffoldMessenger.of(
+                  context,
+                ).showSnackBar(SnackBar(content: Text(state.message)));
               } else if (state is AuthSuccess) {
                 Navigator.pushReplacementNamed(context, '/home');
               }
             },
             builder: (context, state) {
-              return AppButton(
-                text: 'LOG IN',
+              return Buttons.fill(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     context.read<AuthCubit>().login(
-                          _emailController.text.trim(),
-                          _passwordController.text.trim(),
-                        );
+                      _emailController.text.trim(),
+                      _passwordController.text.trim(),
+                    );
                   }
                 },
-                isLoading: state is AuthLoading,
+                label: 'LOG IN',
               );
             },
           ),
           const SizedBox(height: 32),
           const Text(
             'Don\'t have an account? SIGN UP',
-            style: TextStyle(
-              fontSize: 14,
-              color: AppColor.kBlackColor,
-            ),
+            style: TextStyle(fontSize: 14, color: AppColor.kBlackColor),
           ),
           const SizedBox(height: 32),
           Row(
@@ -152,7 +143,7 @@ class _LoginFormState extends State<LoginForm> {
             children: [
               Expanded(
                 child: Divider(
-                   color: AppColor.kGreyColor.withAlpha((0.5 * 255).round()),
+                  color: AppColor.kGreyColor.withAlpha((0.5 * 255).round()),
                   thickness: 1,
                 ),
               ),
@@ -160,10 +151,7 @@ class _LoginFormState extends State<LoginForm> {
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
                   'Or',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: AppColor.kGreyColor,
-                  ),
+                  style: TextStyle(fontSize: 14, color: AppColor.kGreyColor),
                 ),
               ),
               Expanded(
