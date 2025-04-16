@@ -1,33 +1,22 @@
+import 'package:food_app/empty.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/features/auth/presentation/screens/login_screen.dart';
-import 'package:food_app/features/home/presentation/view/home_view.dart';
 
 class Routes {
-  static const String main = "main";
+  static const String empty = "empty";
   static const String login = "auth";
   static const String home = "auth";
-  static const String basket = "basket";
-  static const String allDishes = "all-dishes";
-  static const String onboarding = "onboarding";
-  static const String trackOrder = "track-order";
-  static const String confirmOrder = "confirm-order";
 
+  static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case empty:
+        return MaterialPageRoute(builder: (_) => EmptyScreen());
 
+      case login:
+        return MaterialPageRoute(builder: (_) => LoginScreen());
 
-
-   static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
-  switch (settings.name) {
-    case login:
-      return MaterialPageRoute(builder: (_) => LoginScreen());
-
-    case home:
-      return MaterialPageRoute(builder: (_) => HomeView());
-
-    default:
-      return MaterialPageRoute(builder: (_) => Scaffold());
+      default:
+        return MaterialPageRoute(builder: (_) => Scaffold());
+    }
   }
 }
-}
-
-
-
