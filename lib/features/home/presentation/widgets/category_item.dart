@@ -26,7 +26,7 @@ class CategoryItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(32),
             child: Image.asset(
-              AppImages.assetsImagesHamburger87893071280,
+              AppImages.assetsImagesFoodHamburger,
               height: 44.h,
               width: 44.w,
             ),

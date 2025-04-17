@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:device_preview/device_preview.dart';
@@ -9,12 +8,12 @@ import 'package:food_app/core/helper/shared_preference.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreference.initialize();
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: HydratedStorageDirectory(
       (await getTemporaryDirectory()).path,
     ),
   );
-  await SharedPreference.initialize();
   runApp(DevicePreview(enabled: true, builder: (context) => const MyApp()));
 }
 
@@ -37,6 +36,7 @@ class MyApp extends StatelessWidget {
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
           initialRoute: Routes.home,
+          initialRoute: Routes.onboard,
         );
       },
     );

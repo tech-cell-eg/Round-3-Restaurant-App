@@ -6,6 +6,13 @@ import 'package:food_app/features/home/presentation/widgets/list_view_item.dart'
 import 'package:food_app/features/home/presentation/widgets/message_welcome.dart';
 import 'package:food_app/features/search/presention/view/widgets/search_anochr.dart';
 import 'package:food_app/core/ui/text_form_search.dart';
+
+import 'package:food_app/features/home/presentation/widgets/custom_app_bar.dart';
+import 'package:food_app/features/home/presentation/widgets/list_view_categories.dart';
+import 'package:food_app/features/home/presentation/widgets/list_view_item.dart';
+import 'package:food_app/features/home/presentation/widgets/message_welcome.dart';
+import 'package:food_app/features/home/presentation/widgets/search_anchor.dart';
+ 
 import 'package:food_app/features/home/presentation/widgets/title_section_with_see_all.dart';
 
 class HomeViewBody extends StatelessWidget {

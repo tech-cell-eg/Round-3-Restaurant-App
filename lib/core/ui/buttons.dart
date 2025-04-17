@@ -22,9 +22,13 @@ class Buttons {
     ),
   );
 
-  static Widget outline({required void Function()? onPressed}) =>
-      ElevatedButton(onPressed: onPressed, child: const Text('Login'));
+  static Widget outline({
+    required void Function()? onPressed,
+    required String label,
+  }) => ElevatedButton(onPressed: onPressed, child: Text(label));
 
-  static Widget icon({required void Function()? onPressed}) =>
-      ElevatedButton(onPressed: onPressed, child: const Text('Login'));
+  static Widget text({
+    required void Function()? onPressed,
+    required String label,
+  }) => TextButton(onPressed: onPressed, child: Text(label));
 }

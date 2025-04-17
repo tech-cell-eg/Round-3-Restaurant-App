@@ -20,7 +20,7 @@ class CardItem extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(6.r),
-            child: Image.asset(AppImages.assetsImagesFood),
+            child: Image.asset(AppImages.assetsImagesFoodVegetables),
           ),
           Text("Rose garden restaurant", style: AppTextStyle.textStyle20),
           Text(
@@ -33,15 +33,15 @@ class CardItem extends StatelessWidget {
             spacing: 24.w,
             children: [
               IconImageAndTitle(
-                image: AppImages.assetsImagesStar,
+                image: AppImages.assetsIconsStar,
                 title: "4.7",
               ),
               IconImageAndTitle(
-                image: AppImages.assetsImagesDelivery,
+                image: AppImages.assetsIconsDelivery,
                 title: "Free",
               ),
               IconImageAndTitle(
-                image: AppImages.assetsImagesClock,
+                image: AppImages.assetsIconsClock,
                 title: "20 min",
               ),
             ],

@@ -18,6 +18,8 @@ class CustomAppBar extends StatelessWidget {
         CustomIconImageAvatar(
           image: AppImages.assetsImagesMenu,
           backColor: AppColor.kItemColor.withValues(alpha: 0.2),
+          image: AppImages.assetsIconsMenu,
+          backColor: AppColor.kItemColor,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +35,7 @@ class CustomAppBar extends StatelessWidget {
               children: [
                 Text("Halal Lab office", style: AppTextStyle.textStyle14),
                 SvgPicture.asset(
-                  AppImages.assetsImagesPolygon,
+                  AppImages.assetsIconsPolygon,
                   width: 11.w,
                   height: 10.h,
                 ),
@@ -43,6 +45,28 @@ class CustomAppBar extends StatelessWidget {
         ),
         Spacer(),
         BadgeCount(),
+        Stack(
+          children: [
+            CustomIconImageAvatar(
+              image: AppImages.assetsIconsMarketIcon,
+              backColor: Colors.black,
+            ),
+            Positioned(
+              left: 20,
+              bottom: 22,
+              child: CircleAvatar(
+                radius: 9,
+                backgroundColor: AppColor.kPrimaryColor,
+                child: Text(
+                  "2",
+                  style: AppTextStyle.textStyle12.copyWith(
+                    color: AppColor.kWhiteColor,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }
