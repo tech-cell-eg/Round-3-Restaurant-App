@@ -28,18 +28,15 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       designSize: const Size(375, 812),
       builder: (context, child) {
-        return MultiBlocProvider(
-          providers: [],
-          child: MaterialApp(
-            title: 'Food Delivery',
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-              scaffoldBackgroundColor: Colors.white,
-            ),
-            onGenerateRoute: Routes.onGenerateRoute,
-            //change this line to required screen name
-            initialRoute: Routes.empty,
+        return MaterialApp(
+          title: 'Food Delivery',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            scaffoldBackgroundColor: Colors.white,
           ),
+          onGenerateRoute: Routes.onGenerateRoute,
+          //change this line to required screen name
+          initialRoute: Routes.home,
         );
       },
     );
