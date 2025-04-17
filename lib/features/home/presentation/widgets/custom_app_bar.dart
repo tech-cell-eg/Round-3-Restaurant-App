@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
       spacing: 18.w,
       children: [
         CustomIconImageAvatar(
-          image: AppImages.assetsImagesMenu,
+          image: AppImages.assetsIconsMenu,
           backColor: AppColor.kItemColor,
         ),
         Column(
@@ -32,7 +32,7 @@ class CustomAppBar extends StatelessWidget {
               children: [
                 Text("Halal Lab office", style: AppTextStyle.textStyle14),
                 SvgPicture.asset(
-                  AppImages.assetsImagesPolygon,
+                  AppImages.assetsIconsPolygon,
                   width: 11.w,
                   height: 10.h,
                 ),
@@ -44,7 +44,7 @@ class CustomAppBar extends StatelessWidget {
         Stack(
           children: [
             CustomIconImageAvatar(
-              image: AppImages.assetsImagesMarketIcon,
+              image: AppImages.assetsIconsMarketIcon,
               backColor: Colors.black,
             ),
             Positioned(
