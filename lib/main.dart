@@ -34,6 +34,8 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
           ),
           onGenerateRoute: Routes.onGenerateRoute,
+          //change this line to required screen name
+          initialRoute: Routes.home,
           initialRoute: Routes.onboard,
         );
       },
