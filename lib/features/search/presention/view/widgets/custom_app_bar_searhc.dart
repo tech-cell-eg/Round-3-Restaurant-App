@@ -12,10 +12,10 @@ class CustomAppBarSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      spacing: 10,
+      spacing: 10.w,
       children: [
         CustomIconImageAvatar(
-          image: AppImages.assetsImagesBack,
+          image: AppImages.assetsIconsBack,
           backColor: AppColor.kItemColor.withValues(alpha: 0.2),
         ),
         Text("Search", style: AppTextStyle.textStyle18),

@@ -5,8 +5,8 @@ import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:food_app/features/home/presentation/widgets/icon_and_title.dart';
 
-class CardItem extends StatelessWidget {
-  const CardItem({super.key});
+class CardItemOpenRestaurant extends StatelessWidget {
+  const CardItemOpenRestaurant({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CardItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(6.r),
+            borderRadius: BorderRadius.circular(10.r),
             child: Image.asset(AppImages.assetsImagesFoodVegetables),
           ),
           Text("Rose garden restaurant", style: AppTextStyle.textStyle20),
@@ -32,10 +32,7 @@ class CardItem extends StatelessWidget {
           Row(
             spacing: 24.w,
             children: [
-              IconImageAndTitle(
-                image: AppImages.assetsIconsStar,
-                title: "4.7",
-              ),
+              IconImageAndTitle(image: AppImages.assetsIconsStar, title: "4.7"),
               IconImageAndTitle(
                 image: AppImages.assetsIconsDelivery,
                 title: "Free",

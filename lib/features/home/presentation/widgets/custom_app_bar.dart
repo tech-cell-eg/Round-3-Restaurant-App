@@ -16,10 +16,8 @@ class CustomAppBar extends StatelessWidget {
       spacing: 18.w,
       children: [
         CustomIconImageAvatar(
-          image: AppImages.assetsImagesMenu,
-          backColor: AppColor.kItemColor.withValues(alpha: 0.2),
           image: AppImages.assetsIconsMenu,
-          backColor: AppColor.kItemColor,
+          backColor: AppColor.kItemColor.withValues(alpha: 0.2),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,28 +43,6 @@ class CustomAppBar extends StatelessWidget {
         ),
         Spacer(),
         BadgeCount(),
-        Stack(
-          children: [
-            CustomIconImageAvatar(
-              image: AppImages.assetsIconsMarketIcon,
-              backColor: Colors.black,
-            ),
-            Positioned(
-              left: 20,
-              bottom: 22,
-              child: CircleAvatar(
-                radius: 9,
-                backgroundColor: AppColor.kPrimaryColor,
-                child: Text(
-                  "2",
-                  style: AppTextStyle.textStyle12.copyWith(
-                    color: AppColor.kWhiteColor,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
       ],
     );
   }

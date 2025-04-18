@@ -26,7 +26,7 @@ class ItemRestaurant extends StatelessWidget {
           spacing: 10.h,
           children: [
             Text("Pansi Restaurant", style: AppTextStyle.textStyle16),
-            IconImageAndTitle(image: AppImages.assetsImagesStar, title: "4.7"),
+            IconImageAndTitle(image: AppImages.assetsIconsStar, title: "4.7"),
           ],
         ),
       ],

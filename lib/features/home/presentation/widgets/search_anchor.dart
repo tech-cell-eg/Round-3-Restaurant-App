@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/features/home/presentation/widgets/text_form_search.dart';
+import 'package:food_app/core/ui/text_form_search.dart';
 
 class CustomSearchAnchor extends StatelessWidget {
   const CustomSearchAnchor({super.key});
