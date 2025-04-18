@@ -7,6 +7,9 @@ class TitleSection extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return Text(title, style: AppTextStyle.textStyle20);
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(title, style: AppTextStyle.textStyle20),
+    );
   }
 }

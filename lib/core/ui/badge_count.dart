@@ -14,7 +14,7 @@ class BadgeCount extends StatelessWidget {
     return Stack(
       children: [
         CustomIconImageAvatar(
-          image: AppImages.assetsImagesMarketIcon,
+          image: AppImages.assetsIconsMarketIcon,
           backColor: Colors.black,
         ),
         Positioned(

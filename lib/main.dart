@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Food Delivery',
           theme: ThemeData(
             primarySwatch: Colors.blue,
@@ -35,8 +36,7 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          initialRoute: Routes.home,
-          initialRoute: Routes.onboard,
+          initialRoute: Routes.foodBurger,
         );
       },
     );

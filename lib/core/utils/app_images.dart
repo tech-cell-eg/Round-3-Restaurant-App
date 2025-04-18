@@ -189,7 +189,7 @@ class AppImages {
   /// Assets for assetsImagesFoodHamburger
   /// assets/images/food/hamburger.png
   static const String assetsImagesFoodHamburger =
-      "assets/images/food/hamburger.png";
+      "assets/images/food/homBurger.png";
 
   /// Assets for assetsImagesFoodRestaurant
   /// assets/images/food/restaurant.svg
