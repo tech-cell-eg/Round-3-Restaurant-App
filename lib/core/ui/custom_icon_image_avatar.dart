@@ -6,18 +6,26 @@ class CustomIconImageAvatar extends StatelessWidget {
   const CustomIconImageAvatar({
     super.key,
     required this.image,
-    required this.backColor, this.colorImage,
+    required this.backColor,
+    this.colorImage,
   });
   final String image;
   final Color backColor;
-   final Color ?colorImage;
+  final Color? colorImage;
 
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: 20,
       backgroundColor: backColor,
-      child: SvgPicture.asset(image,color: colorImage??AppColor.kBlackColor,),
+      child: SvgPicture.asset(
+        image,
+
+        colorFilter: const ColorFilter.mode(
+          AppColor.kBlackColor,
+          BlendMode.srcIn,
+        ),
+      ),
     );
   }
 }

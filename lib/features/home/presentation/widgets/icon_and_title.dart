@@ -17,8 +17,14 @@ class IconImageAndTitle extends StatelessWidget {
     return Row(
       spacing: 5,
       children: [
-        SvgPicture.asset(image, color: AppColor.kSecondaryColor),
-        Text(title, style: AppTextStyle.textStyle16),
+        SvgPicture.asset(
+          image,
+          colorFilter: const ColorFilter.mode(
+            AppColor.kSecondaryColor,
+            BlendMode.srcIn,
+          ),
+        ),
+        Text(title, style: AppTextStyle.subTitle),
       ],
     );
   }
