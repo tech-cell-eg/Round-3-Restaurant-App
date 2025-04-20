@@ -32,7 +32,7 @@ class CategoryItem extends StatelessWidget {
             ),
           ),
     
-          Text("Burger", style: AppTextStyle.textStyle12),
+          Text("Burger", style: AppTextStyle.label),
         ],
       ),
     );

@@ -9,7 +9,7 @@ class TitleSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
-      child: Text(title, style: AppTextStyle.textStyle20),
+      child: Text(title, style: AppTextStyle.header),
     );
   }
 }

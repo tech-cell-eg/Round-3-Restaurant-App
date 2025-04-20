@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/features/home/presentation/widgets/custom_app_bar.dart';
 import 'package:food_app/features/home/presentation/widgets/list_view_categories.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/list_view_item_open_retaurant.dart';
+import 'package:food_app/features/food_burger/presentation/views/widget/list_view_item_open_restaurant.dart';
 import 'package:food_app/features/home/presentation/widgets/message_welcome.dart';
 import 'package:food_app/core/ui/text_form_search.dart';
 

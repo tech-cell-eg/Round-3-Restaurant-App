@@ -20,14 +20,14 @@ class OnboardingView extends StatelessWidget {
           ),
           Text(
             model.title,
-            style: AppTextStyle.textStyle12.copyWith(
+            style: AppTextStyle.label.copyWith(
               color: Colors.black,
               fontSize: 20.sp,
             ),
           ),
           Text(
             model.description,
-            style: AppTextStyle.textStyle20.copyWith(
+            style: AppTextStyle.header.copyWith(
               color: Colors.grey,
               fontSize: 14.sp,
             ),

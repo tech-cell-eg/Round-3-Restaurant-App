@@ -25,7 +25,7 @@ class BadgeCount extends StatelessWidget {
             backgroundColor: AppColor.kPrimaryColor,
             child: Text(
               "2",
-              style: AppTextStyle.textStyle12.copyWith(
+              style: AppTextStyle.label.copyWith(
                 color: AppColor.kWhiteColor,
               ),
             ),
