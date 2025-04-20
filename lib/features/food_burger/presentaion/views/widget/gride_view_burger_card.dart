@@ -17,7 +17,7 @@ class GridViewBurgerCard extends StatelessWidget {
       ),
       itemBuilder: (context, index) {
         return BurgerCard(
-          image: AppImages.assetsImagesFoodHamburger,
+          image: AppImages.assetsImagesFoodHomBurger,
           name: 'Burger Bistro',
           restaurant: 'Rose Garden',
           price: 40,
