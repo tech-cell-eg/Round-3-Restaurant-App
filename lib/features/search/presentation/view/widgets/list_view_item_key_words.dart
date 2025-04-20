@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/features/search/presention/view/widgets/items_key_words.dart';
+import 'package:food_app/features/search/presentation/view/widgets/items_key_words.dart';
 
 class ListViewItemKeyWords extends StatelessWidget {
   const ListViewItemKeyWords({super.key});

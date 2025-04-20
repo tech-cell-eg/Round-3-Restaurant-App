@@ -32,10 +32,10 @@ class CardItemOpenRestaurant extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.r),
               child: Image.asset(AppImages.assetsImagesFoodVegetables),
             ),
-            Text("Rose garden restaurant", style: AppTextStyle.textStyle20),
+            Text("Rose garden restaurant", style: AppTextStyle.header),
             Text(
-              'Burger - Chiken - Riche - Wings ',
-              style: AppTextStyle.textStyle14.copyWith(
+              'Burger - Chicken - Riche - Wings ',
+              style: AppTextStyle.description.copyWith(
                 color: AppColor.kItemColor,
               ),
             ),

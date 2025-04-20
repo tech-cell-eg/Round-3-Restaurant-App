@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/utils/app_images.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/burger_card.dart';
+import 'package:food_app/features/food_burger/presentation/views/widget/burger_card.dart';
 
 class GridViewBurgerCard extends StatelessWidget {
   const GridViewBurgerCard({super.key});

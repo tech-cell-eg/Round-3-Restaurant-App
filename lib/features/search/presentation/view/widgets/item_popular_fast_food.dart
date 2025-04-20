@@ -31,11 +31,11 @@ class ItemPopularFastFood extends StatelessWidget {
                 children: [
                   Text(
                     "European Pizza",
-                    style: AppTextStyle.textStyle14.copyWith(fontSize: 15.sp),
+                    style: AppTextStyle.subTitle.copyWith(fontSize: 15.sp),
                   ),
                   Text(
                     "Uttora Coffe House",
-                    style: AppTextStyle.textStyle13.copyWith(
+                    style: AppTextStyle.subTitle.copyWith(
                       color: AppColor.kItemColor,
                     ),
                   ),

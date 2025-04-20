@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/utils/app_color.dart';
-import 'package:food_app/features/search/presention/view/widgets/item_restaurant.dart';
+import 'package:food_app/features/search/presentation/view/widgets/item_restaurant.dart';
 
 class ListViewItemRestaurant extends StatelessWidget {
   const ListViewItemRestaurant({super.key});

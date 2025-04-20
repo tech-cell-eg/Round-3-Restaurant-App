@@ -63,7 +63,6 @@ class BurgerCard extends StatelessWidget {
                         ),
                         FloatingActionButton(
                           onPressed: () {
-                            print('$name added to cart');
                           },
                           mini: true,
                           backgroundColor: Colors.orange,

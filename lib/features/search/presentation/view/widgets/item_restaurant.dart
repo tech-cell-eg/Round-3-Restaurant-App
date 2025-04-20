@@ -25,7 +25,7 @@ class ItemRestaurant extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: 10.h,
           children: [
-            Text("Pansi Restaurant", style: AppTextStyle.textStyle16),
+            Text("Pansi Restaurant", style: AppTextStyle.subTitle),
             IconImageAndTitle(image: AppImages.assetsIconsStar, title: "4.7"),
           ],
         ),

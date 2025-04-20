@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/card_item_open_retaurant.dart';
+import 'package:food_app/features/food_burger/presentation/views/widget/card_item_open_restaurant.dart';
 
 class ListViewItemOpenRestaurant extends StatelessWidget {
   const ListViewItemOpenRestaurant({super.key});

@@ -18,7 +18,7 @@ class CustomAppBarSearch extends StatelessWidget {
           image: AppImages.assetsIconsBack,
           backColor: AppColor.kItemColor.withValues(alpha: 0.2),
         ),
-        Text("Search", style: AppTextStyle.textStyle18),
+        Text("Search", style: AppTextStyle.title),
         Spacer(),
         BadgeCount(),
       ],

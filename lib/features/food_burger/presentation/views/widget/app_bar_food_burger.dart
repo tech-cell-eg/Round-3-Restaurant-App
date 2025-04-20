@@ -29,10 +29,13 @@ class AppBarFoodBurger extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Burger", style: AppTextStyle.textStyle14),
+              Text("Burger", style: AppTextStyle.description),
               SvgPicture.asset(
                 AppImages.assetsIconsUnderArrow,
-                color: AppColor.kSecondaryColor,
+                colorFilter: const ColorFilter.mode(
+                  AppColor.kSecondaryColor,
+                  BlendMode.srcIn,
+                ),
               ),
             ],
           ),

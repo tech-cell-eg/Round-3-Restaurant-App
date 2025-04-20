@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/core/ui/custom_icon_image_avatar.dart';
 import 'package:food_app/core/ui/title_section.dart';
-import 'package:food_app/core/utils/app_color.dart';
-import 'package:food_app/core/utils/app_images.dart';
-import 'package:food_app/core/utils/app_text_style.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/app_bar_food_burger.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/burger_card.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/gride_view_burger_card.dart';
-import 'package:food_app/features/food_burger/presentaion/views/widget/list_view_item_open_retaurant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_app/features/food_burger/presentation/views/widget/app_bar_food_burger.dart';
+import 'package:food_app/features/food_burger/presentation/views/widget/gride_view_burger_card.dart';
+import 'package:food_app/features/food_burger/presentation/views/widget/list_view_item_open_restaurant.dart';
 
 class FoodBurgerViewBody extends StatelessWidget {
   const FoodBurgerViewBody({super.key});

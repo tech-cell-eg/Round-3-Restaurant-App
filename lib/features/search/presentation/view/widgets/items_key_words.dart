@@ -16,7 +16,7 @@ class CustomItemKeyWords extends StatelessWidget {
         border: Border.all(width: 0.3),
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Text("Burger", style: AppTextStyle.textStyle12),
+      child: Text("Burger", style: AppTextStyle.description),
     );
   }
 }

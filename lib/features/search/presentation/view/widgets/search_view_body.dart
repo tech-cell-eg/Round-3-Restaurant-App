@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/ui/title_section.dart';
-import 'package:food_app/core/utils/app_color.dart';
-import 'package:food_app/core/utils/app_images.dart';
-import 'package:food_app/features/search/presention/view/widgets/item_popular_fast_food.dart';
-import 'package:food_app/features/search/presention/view/widgets/list_view_item_key_words.dart';
-import 'package:food_app/features/search/presention/view/widgets/list_view_item_restaurant.dart';
-import 'package:food_app/features/search/presention/view/widgets/list_view_popular_fast_food.dart';
-import 'package:food_app/features/search/presention/view/widgets/search_anochr.dart';
-import 'package:food_app/features/search/presention/view/widgets/custom_app_bar_searhc.dart';
+import 'package:food_app/features/search/presentation/view/widgets/list_view_item_key_words.dart';
+import 'package:food_app/features/search/presentation/view/widgets/list_view_item_restaurant.dart';
+import 'package:food_app/features/search/presentation/view/widgets/list_view_popular_fast_food.dart';
+import 'package:food_app/features/search/presentation/view/widgets/search_anchor.dart';
+import 'package:food_app/features/search/presentation/view/widgets/custom_app_bar_search.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
