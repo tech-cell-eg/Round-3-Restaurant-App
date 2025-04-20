@@ -73,6 +73,7 @@ flutter:
   assets:
     - assets/images/onboarding/
     - assets/images/food/
+    - assets/images/auth/
     - assets/images/
     - assets/icons/
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/core/utils/app_text_style.dart';
 
 import '../../../../core/utils/app_color.dart';
 
@@ -37,10 +38,8 @@ class AppTextFormField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            color: AppColor.kGreyColor,
+          style: AppTextStyle.description.copyWith(
+            color: AppColor.kPrimaryDark,
           ),
         ),
         const SizedBox(height: 8),
@@ -53,7 +52,7 @@ class AppTextFormField extends StatelessWidget {
           enabled: enabled,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: const TextStyle(color: AppColor.kGreyColor),
+            hintStyle: const TextStyle(color: AppColor.kPrimaryDark),
             filled: true,
             fillColor: AppColor.kGreyColor,
             prefixIcon:
@@ -62,7 +61,7 @@ class AppTextFormField extends StatelessWidget {
                       padding: const EdgeInsets.all(12.0),
                       child: Icon(
                         prefixIcon,
-                        color: AppColor.kItemColor,
+                        color: AppColor.kPrimaryDark,
                         size: 24,
                       ),
                     )
@@ -75,7 +74,7 @@ class AppTextFormField extends StatelessWidget {
                         obscureText
                             ? Icons.visibility_off_outlined
                             : Icons.visibility_outlined,
-                        color: AppColor.kItemColor,
+                        color: AppColor.kPrimaryDark,
                       ),
                       padding: const EdgeInsets.all(12.0),
                       constraints: const BoxConstraints(),
