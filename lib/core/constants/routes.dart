@@ -7,9 +7,9 @@ import 'package:food_app/features/search/presention/view/search_view.dart';
 import 'package:food_app/features/onboarding/onboarding_screen.dart';
 
 class Routes {
+  static const home = "home";
   static const empty = "empty";
   static const login = "login";
-  static const home = "home";
   static const search = "search";
   static const onboard = "onboard";
   static const foodBurger = "food_burger";
