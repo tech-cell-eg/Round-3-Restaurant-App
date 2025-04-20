@@ -25,13 +25,13 @@ class CustomAppBar extends StatelessWidget {
           children: [
             Text(
               "Deliver to",
-              style: AppTextStyle.textStyle12.copyWith(
+              style: AppTextStyle.label.copyWith(
                 color: AppColor.kPrimaryColor,
               ),
             ),
             Row(
               children: [
-                Text("Halal Lab office", style: AppTextStyle.textStyle14),
+                Text("Halal Lab office", style: AppTextStyle.description),
                 SvgPicture.asset(
                   AppImages.assetsIconsPolygon,
                   width: 11.w,

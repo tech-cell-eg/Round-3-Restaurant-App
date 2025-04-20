@@ -42,11 +42,11 @@ class RestaurantScreen extends StatelessWidget {
                     spacing: 4.h,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text(restaurant.name, style: AppTextStyle.textStyle20),
+                      Text(restaurant.name, style: AppTextStyle.header),
                       Text(
                         restaurant.desc,
                         textAlign: TextAlign.justify,
-                        style: AppTextStyle.textStyle14,
+                        style: AppTextStyle.subTitle,
                       ),
                     ],
                   ),
