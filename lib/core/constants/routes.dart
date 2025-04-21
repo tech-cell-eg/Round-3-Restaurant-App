@@ -2,6 +2,7 @@ import 'package:food_app/bottom_sheets.dart';
 import 'package:food_app/empty.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/features/auth/presentation/screens/login_screen.dart';
+import 'package:food_app/features/cheef_menu/presention/views/cheef_view.dart';
 import 'package:food_app/features/food_burger/presentaion/views/food_burger_view.dart';
 import 'package:food_app/features/home/presentation/view/home_view.dart';
 import 'package:food_app/features/search/presention/view/search_view.dart';
@@ -15,11 +16,15 @@ class Routes {
   static const onboard = "onboard";
   static const foodBurger = "food_burger";
   static const bottom = "bottom";
+  static const String chefMenu = "chef_menu";
   static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case bottom:
-        return MaterialPageRoute(builder: (_) => SlidingBottomSheetOrders());
+      
+      case chefMenu:
+        return MaterialPageRoute(builder: (_) => ChefMenuView());
 
+case bottom:
+        return MaterialPageRoute(builder: (_) => SlidingBottomSheetOrders());
 
 case empty:
         return MaterialPageRoute(builder: (_) => EmptyScreen());

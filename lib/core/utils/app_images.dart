@@ -5,11 +5,11 @@ class AppImages {
   /// Assets for assetsIconsAppleIcon
   /// assets/icons/appleIcon.svg
   static const String assetsIconsAppleIcon = "assets/icons/appleIcon.svg";
-static const String assetsIconsCart = "assets/icons/cart.svg";
+
   /// Assets for assetsIconsBack
   /// assets/icons/back.svg
   static const String assetsIconsBack = "assets/icons/back.svg";
-  static const String assetsIconsBottomSheet = "assets/icons/bottomSh.svg";
+
   /// Assets for assetsIconsBell
   /// assets/icons/bell.svg
   static const String assetsIconsBell = "assets/icons/bell.svg";
@@ -17,6 +17,10 @@ static const String assetsIconsCart = "assets/icons/cart.svg";
   /// Assets for assetsIconsBgBanner
   /// assets/icons/bg-banner.svg
   static const String assetsIconsBgBanner = "assets/icons/bg-banner.svg";
+
+  /// Assets for assetsIconsBottomSh
+  /// assets/icons/bottomSh.svg
+  static const String assetsIconsBottomSh = "assets/icons/bottomSh.svg";
 
   /// Assets for assetsIconsCall
   /// assets/icons/call.svg
@@ -29,6 +33,10 @@ static const String assetsIconsCart = "assets/icons/cart.svg";
   /// Assets for assetsIconsCar
   /// assets/icons/car.svg
   static const String assetsIconsCar = "assets/icons/car.svg";
+
+  /// Assets for assetsIconsCart
+  /// assets/icons/cart.svg
+  static const String assetsIconsCart = "assets/icons/cart.svg";
 
   /// Assets for assetsIconsCheck
   /// assets/icons/check.svg
@@ -122,6 +130,10 @@ static const String assetsIconsCart = "assets/icons/cart.svg";
   /// assets/icons/notification.svg
   static const String assetsIconsNotification = "assets/icons/notification.svg";
 
+  /// Assets for assetsIconsNumberoforder
+  /// assets/icons/numberoforder.svg
+  static const String assetsIconsNumberoforder = "assets/icons/numberoforder.svg";
+
   /// Assets for assetsIconsPlus
   /// assets/icons/plus.svg
   static const String assetsIconsPlus = "assets/icons/plus.svg";
@@ -197,6 +209,10 @@ static const String assetsIconsCart = "assets/icons/cart.svg";
   /// Assets for assetsIconsWatch
   /// assets/icons/watch.svg
   static const String assetsIconsWatch = "assets/icons/watch.svg";
+
+  /// Assets for assetsIconsWithdrawal
+  /// assets/icons/withdrawal.svg
+  static const String assetsIconsWithdrawal = "assets/icons/withdrawal.svg";
 
   /// Assets for assetsImagesFoodHomBurger
   /// assets/images/food/homBurger.png

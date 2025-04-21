@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_text_style.dart';
 
 class BurgerCard extends StatelessWidget {
   final String image;
@@ -24,12 +25,12 @@ class BurgerCard extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Positioned(
-            top: 40,
+            top: 40.h,
             child: Card(
               elevation: 0.1,
               color: AppColor.kWhiteColor,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
               ),
               child: Container(
                 width: 153.w,
@@ -40,15 +41,14 @@ class BurgerCard extends StatelessWidget {
                   children: [
                     Text(
                       name,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: AppTextStyle.textStyle16,
                       textAlign: TextAlign.center,
                     ),
                     Text(
                       restaurant,
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      style: AppTextStyle.textStyle14.copyWith(
+                        color: AppColor.kItemColor,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                     Row(
@@ -56,10 +56,7 @@ class BurgerCard extends StatelessWidget {
                       children: [
                         Text(
                           '\$${price.toStringAsFixed(0)}',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: AppTextStyle.textStyle18,
                         ),
                         FloatingActionButton(
                           onPressed: () {

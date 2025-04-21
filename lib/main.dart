@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          initialRoute: Routes.menu,
+          initialRoute: Routes.chefMenu,
         );
       },
     );

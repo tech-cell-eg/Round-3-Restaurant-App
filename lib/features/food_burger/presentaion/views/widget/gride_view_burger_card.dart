@@ -11,7 +11,7 @@ class GridViewBurgerCard extends StatelessWidget {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.7,
+        childAspectRatio: 0.7.h,
         crossAxisSpacing: 10.w,
         mainAxisSpacing: 0.0.h,
       ),
