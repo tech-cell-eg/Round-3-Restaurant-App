@@ -9,7 +9,7 @@ static const String assetsIconsCart = "assets/icons/cart.svg";
   /// Assets for assetsIconsBack
   /// assets/icons/back.svg
   static const String assetsIconsBack = "assets/icons/back.svg";
-
+  static const String assetsIconsBottomSheet = "assets/icons/bottomSh.svg";
   /// Assets for assetsIconsBell
   /// assets/icons/bell.svg
   static const String assetsIconsBell = "assets/icons/bell.svg";
