@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/features/profile/presentation/profile_screen.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:device_preview/device_preview.dart';
@@ -38,15 +39,7 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          // initialRoute: Routes.foodBurger,
-          home: ProfileEditScreen(
-            User(
-              id: "1",
-              name: "John Doe",
-              email: "l0KlI@example.com",
-
-            )
-          ),
+          initialRoute: Routes.foodBurger,
         );
       },
     );
