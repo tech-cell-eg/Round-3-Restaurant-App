@@ -107,6 +107,7 @@ class _AddressBottomSheetState extends State<AddressBottomSheet> {
                 key: formKey,
                 child: TextInputField(
                   label: "Address",
+                  hintText: "Enter your address",
                   controller: controller,
                   hint: "Home • 123 Main St",
                   validator: InputValidator.validateAddress,
