@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/core/constants/routes.dart';
+import 'package:food_app/core/ui/inputs.dart';
 import 'package:food_app/core/ui/buttons.dart';
-import 'package:food_app/features/auth/presentation/widgets/text_form_field.dart';
+import 'package:food_app/core/constants/routes.dart';
 
 class ForgetPasswordForm extends StatelessWidget {
   const ForgetPasswordForm({super.key});
@@ -12,10 +12,10 @@ class ForgetPasswordForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 10),
-        AppTextFormField(
+        TextInputField(
           label: "Email",
           hintText: "Enter your email",
-          prefixIcon: Icons.person,
+          icon: Icons.person,
         ),
         const SizedBox(height: 20),
         Buttons.fill(onPressed: () { 
