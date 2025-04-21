@@ -3,8 +3,10 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:food_app/core/constants/routes.dart';
+import 'package:food_app/features/profile/model/user.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/helper/shared_preference.dart';
+import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +38,15 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          initialRoute: Routes.foodBurger,
+          // initialRoute: Routes.foodBurger,
+          home: ProfileEditScreen(
+            User(
+              id: "1",
+              name: "John Doe",
+              email: "l0KlI@example.com",
+
+            )
+          ),
         );
       },
     );

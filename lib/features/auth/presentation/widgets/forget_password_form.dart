@@ -14,8 +14,9 @@ class ForgetPasswordForm extends StatelessWidget {
         const SizedBox(height: 10),
         TextInputField(
           label: "Email",
-          hintText: "Enter your email",
           icon: Icons.person,
+          hint: "Enter your email",
+          keyboardType: TextInputType.emailAddress,
         ),
         const SizedBox(height: 20),
         Buttons.fill(onPressed: () { 

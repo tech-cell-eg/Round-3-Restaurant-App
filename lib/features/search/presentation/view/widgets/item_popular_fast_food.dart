@@ -46,7 +46,7 @@ class ItemPopularFastFood extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12.r),
             child: Image.asset(
-              AppImages.assetsImagesApplePizza,
+              AppImages.assetsImagesPizza,
               height: 84.h,
               width: 122.w,
             ),

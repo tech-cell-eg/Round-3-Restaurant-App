@@ -18,14 +18,12 @@ class LoginForm extends StatelessWidget {
           const SizedBox(height: 10),
           TextInputField(
             label: "Email",
-            hintText: "Enter your email",
             icon: Icons.person,
+            hint: "Enter your email",
+            keyboardType: TextInputType.emailAddress,
           ),
           const SizedBox(height: 10),
-          PasswordInputField(
-            label: "Password",
-            hintText: "Enter your password",
-          ),
+          PasswordInputField(label: "Password", hint: "Enter your password"),
           const SizedBox(height: 10),
           CustomRow(
             onPressed: () {

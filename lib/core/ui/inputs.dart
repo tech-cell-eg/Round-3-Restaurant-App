@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextInputField extends StatelessWidget {
   final String label;
   final bool enabled;
+  final String? hint;
   final IconData? icon;
-  final String hintText;
+  final int lines;
   final TextInputType keyboardType;
   final void Function(String)? onChanged;
   final TextEditingController? controller;
@@ -16,41 +16,67 @@ class TextInputField extends StatelessWidget {
   const TextInputField({
     super.key,
     this.icon,
+    this.hint,
     this.validator,
     this.onChanged,
     this.controller,
     required this.label,
+    this.lines = 1,
     this.enabled = true,
-    required this.hintText,
     this.keyboardType = TextInputType.text,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 8.h,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           label,
           style: AppTextStyle.label.copyWith(color: AppColor.kPrimaryDark),
         ),
+        const SizedBox(height: 8),
         TextFormField(
-          enabled: enabled,
-          validator: validator,
-          onChanged: onChanged,
           controller: controller,
           keyboardType: keyboardType,
+          validator: validator,
+          onChanged: onChanged,
+          enabled: enabled,
+          maxLines: lines,
           decoration: InputDecoration(
-            prefix: icon != null ? Icon(icon) : null,
-            hintText: hintText,
+            hintText: hint,
             hintStyle: const TextStyle(color: AppColor.kPrimaryDark),
             filled: true,
             fillColor: AppColor.kGreyColor,
-            border: _buildNoneBorder(),
-            enabledBorder: _buildNoneBorder(),
-            focusedBorder: _buildFocusBorder(),
-            errorBorder: _buildErrorBorder(),
+            prefixIcon:
+                icon != null
+                    ? Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Icon(icon, color: AppColor.kPrimaryDark, size: 24),
+                    )
+                    : null,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(
+                color: AppColor.kPrimaryColor,
+                width: 1.5,
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(
+                color: AppColor.kRedColor,
+                width: 1.5,
+              ),
+            ),
             contentPadding: const EdgeInsets.symmetric(
               vertical: 16,
               horizontal: 16,
@@ -64,18 +90,18 @@ class TextInputField extends StatelessWidget {
 
 class PasswordInputField extends StatefulWidget {
   final String label;
-  final String hintText;
+  final String hint;
   final void Function(String)? onChanged;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
 
   const PasswordInputField({
     super.key,
-    required this.label,
-    required this.hintText,
-    this.controller,
     this.validator,
     this.onChanged,
+    this.controller,
+    required this.label,
+    required this.hint,
   });
 
   @override
@@ -87,34 +113,64 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 8.h,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           widget.label,
-          style: AppTextStyle.label.copyWith(color: AppColor.kPrimaryDark),
+          style: AppTextStyle.description.copyWith(
+            color: AppColor.kPrimaryDark,
+          ),
         ),
+        const SizedBox(height: 8),
         TextFormField(
           controller: widget.controller,
           obscureText: obscureText,
           validator: widget.validator,
           onChanged: widget.onChanged,
           decoration: InputDecoration(
-            hintText: widget.hintText,
+            hintText: widget.hint,
             hintStyle: const TextStyle(color: AppColor.kPrimaryDark),
             filled: true,
             fillColor: AppColor.kGreyColor,
-            prefix: Icon(Icons.lock_outlined, color: AppColor.kPrimaryDark),
-            suffixIcon: Icon(
-              obscureText
-                  ? Icons.visibility_off_outlined
-                  : Icons.visibility_outlined,
+            prefixIcon: Icon(
+              Icons.lock_outline,
               color: AppColor.kPrimaryDark,
+              size: 24,
             ),
-            border: _buildNoneBorder(),
-            enabledBorder: _buildNoneBorder(),
-            focusedBorder: _buildFocusBorder(),
-            errorBorder: _buildErrorBorder(),
+            suffixIcon: IconButton(
+              onPressed: () => setState(() => obscureText = !obscureText),
+              icon: Icon(
+                obscureText
+                    ? Icons.visibility_off_outlined
+                    : Icons.visibility_outlined,
+                color: AppColor.kPrimaryDark,
+              ),
+              padding: const EdgeInsets.all(12.0),
+              constraints: const BoxConstraints(),
+              iconSize: 24,
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(
+                color: AppColor.kPrimaryColor,
+                width: 1.5,
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(
+                color: AppColor.kRedColor,
+                width: 1.5,
+              ),
+            ),
             contentPadding: const EdgeInsets.symmetric(
               vertical: 16,
               horizontal: 16,
@@ -124,25 +180,4 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
       ],
     );
   }
-}
-
-InputBorder _buildFocusBorder() {
-  return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(12),
-    borderSide: const BorderSide(color: AppColor.kPrimaryColor, width: 1.5),
-  );
-}
-
-InputBorder _buildErrorBorder() {
-  return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(12),
-    borderSide: const BorderSide(color: AppColor.kRedColor, width: 1.5),
-  );
-}
-
-InputBorder _buildNoneBorder() {
-  return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(12),
-    borderSide: BorderSide.none,
-  );
 }

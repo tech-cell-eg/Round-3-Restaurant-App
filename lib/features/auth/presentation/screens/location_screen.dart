@@ -109,6 +109,7 @@ class _AddressBottomSheetState extends State<AddressBottomSheet> {
                   label: "Address",
                   hintText: "Enter your address",
                   controller: controller,
+                  hint: "Home • 123 Main St",
                   validator: InputValidator.validateAddress,
                 ),
               ),

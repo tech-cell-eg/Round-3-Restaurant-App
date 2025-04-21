@@ -2,17 +2,6 @@
 class AppImages {
   AppImages._();
   
-  /// Assets for assetsImagesAppleIcon
-  /// assets/images/appleIcon.svg
-  static const String assetsImagesAppleIcon = "assets/images/appleIcon.svg";
-  static const String assetsImagesApplePizza = "assets/images/pizza.jpg";
-
-  static const String assetsImagesRestaurant= "assets/images/resturant.jpeg";
-  /// Assets for assetsImagesBG Asset
-  /// assets/images/BG Asset.svg
-  static const String assetsImagesBgAsset = "assets/images/BG Asset.svg";
-
-
   /// Assets for assetsIconsAppleIcon
   /// assets/icons/appleIcon.svg
   static const String assetsIconsAppleIcon = "assets/icons/appleIcon.svg";
@@ -175,8 +164,7 @@ class AppImages {
 
   /// Assets for assetsIconsVectorWithLogo
   /// assets/icons/vectorWithLogo.svg
-  static const String assetsIconsVectorWithLogo =
-      "assets/icons/vectorWithLogo.svg";
+  static const String assetsIconsVectorWithLogo = "assets/icons/vectorWithLogo.svg";
 
   /// Assets for assetsIconsVolume
   /// assets/icons/volume.svg
@@ -186,33 +174,48 @@ class AppImages {
   /// assets/icons/watch.svg
   static const String assetsIconsWatch = "assets/icons/watch.svg";
 
+  /// Assets for assetsImagesAuthBackgroundAsset
+  /// assets/images/auth/background_asset.png
+  static const String assetsImagesAuthBackgroundAsset = "assets/images/auth/background_asset.png";
+
+  /// Assets for assetsImagesAuthLocationImageRemovebgPreview
+  /// assets/images/auth/location_image-removebg-preview.png
+  static const String assetsImagesAuthLocationImageRemovebgPreview = "assets/images/auth/location_image-removebg-preview.png";
+
   /// Assets for assetsImagesFoodHamburger
   /// assets/images/food/hamburger.png
-  static const String assetsImagesFoodHamburger =
-      "assets/images/food/homBurger.png";
+  static const String assetsImagesFoodHamburger = "assets/images/food/hamburger.png";
 
-  /// Assets for assetsImagesFoodRestaurant
-  /// assets/images/food/restaurant.svg
-  static const String assetsImagesFoodRestaurant =
-      "assets/images/food/restaurant.svg";
+  /// Assets for assetsImagesFoodRestuarant
+  /// assets/images/food/restuarant.svg
+  static const String assetsImagesFoodRestuarant = "assets/images/food/restuarant.svg";
 
   /// Assets for assetsImagesFoodVegetables
   /// assets/images/food/vegetables.jpeg
-  static const String assetsImagesFoodVegetables =
-      "assets/images/food/vegetables.jpeg";
+  static const String assetsImagesFoodVegetables = "assets/images/food/vegetables.jpeg";
 
   /// Assets for assetsImagesOnboardingOnboarding1
   /// assets/images/onboarding/onboarding-1.png
-  static const String assetsImagesOnboardingOnboarding1 =
-      "assets/images/onboarding/onboarding-1.png";
+  static const String assetsImagesOnboardingOnboarding1 = "assets/images/onboarding/onboarding-1.png";
 
   /// Assets for assetsImagesOnboardingOnboarding2
   /// assets/images/onboarding/onboarding-2.png
-  static const String assetsImagesOnboardingOnboarding2 =
-      "assets/images/onboarding/onboarding-2.png";
+  static const String assetsImagesOnboardingOnboarding2 = "assets/images/onboarding/onboarding-2.png";
 
   /// Assets for assetsImagesOnboardingOnboarding3
   /// assets/images/onboarding/onboarding-3.png
-  static const String assetsImagesOnboardingOnboarding3 =
-      "assets/images/onboarding/onboarding-3.png";
+  static const String assetsImagesOnboardingOnboarding3 = "assets/images/onboarding/onboarding-3.png";
+
+  /// Assets for assetsImagesPizza
+  /// assets/images/pizza.jpg
+  static const String assetsImagesPizza = "assets/images/pizza.jpg";
+
+  /// Assets for assetsImagesRestaurant
+  /// assets/images/restaurant.jpeg
+  static const String assetsImagesRestaurant = "assets/images/restaurant.jpeg";
+
+  /// Assets for assetsImagesUser
+  /// assets/images/user.jpg
+  static const String assetsImagesUser = "assets/images/user.jpg";
 }
+
