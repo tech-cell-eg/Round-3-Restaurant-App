@@ -114,9 +114,49 @@ class AppImages {
   /// assets/icons/polygon.svg
   static const String assetsIconsPolygon = "assets/icons/polygon.svg";
 
+  /// Assets for assetsIconsProfileCart
+  /// assets/icons/profile/cart.svg
+  static const String assetsIconsProfileCart = "assets/icons/profile/cart.svg";
+
+  /// Assets for assetsIconsProfileCreditCard
+  /// assets/icons/profile/credit-card.svg
+  static const String assetsIconsProfileCreditCard = "assets/icons/profile/credit-card.svg";
+
+  /// Assets for assetsIconsProfileFaq
+  /// assets/icons/profile/faq.svg
+  static const String assetsIconsProfileFaq = "assets/icons/profile/faq.svg";
+
+  /// Assets for assetsIconsProfileFavorite
+  /// assets/icons/profile/favorite.svg
+  static const String assetsIconsProfileFavorite = "assets/icons/profile/favorite.svg";
+
   /// Assets for assetsIconsProfileImage
   /// assets/icons/profileImage.svg
   static const String assetsIconsProfileImage = "assets/icons/profileImage.svg";
+
+  /// Assets for assetsIconsProfileLogout
+  /// assets/icons/profile/Logout.svg
+  static const String assetsIconsProfileLogout = "assets/icons/profile/Logout.svg";
+
+  /// Assets for assetsIconsProfileMap
+  /// assets/icons/profile/map.svg
+  static const String assetsIconsProfileMap = "assets/icons/profile/map.svg";
+
+  /// Assets for assetsIconsProfileNotification
+  /// assets/icons/profile/notification.svg
+  static const String assetsIconsProfileNotification = "assets/icons/profile/notification.svg";
+
+  /// Assets for assetsIconsProfilePerson
+  /// assets/icons/profile/person.svg
+  static const String assetsIconsProfilePerson = "assets/icons/profile/person.svg";
+
+  /// Assets for assetsIconsProfileReview
+  /// assets/icons/profile/review.svg
+  static const String assetsIconsProfileReview = "assets/icons/profile/review.svg";
+
+  /// Assets for assetsIconsProfileSettings
+  /// assets/icons/profile/settings.svg
+  static const String assetsIconsProfileSettings = "assets/icons/profile/settings.svg";
 
   /// Assets for assetsIconsQuestion
   /// assets/icons/question.svg
