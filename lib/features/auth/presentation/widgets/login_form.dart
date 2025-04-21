@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/ui/buttons.dart';
+import 'package:food_app/core/ui/inputs.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:food_app/features/auth/presentation/widgets/custom_row.dart';
-import 'package:food_app/features/auth/presentation/widgets/text_form_field.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -16,22 +16,18 @@ class LoginForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 10),
-          AppTextFormField(
+          TextInputField(
             label: "Email",
-            hintText: "Enter your email",
-            prefixIcon: Icons.person,
+            icon: Icons.person,
+            hint: "Enter your email",
+            keyboardType: TextInputType.emailAddress,
           ),
           const SizedBox(height: 10),
-          AppTextFormField(
-            label: "Password",
-            hintText: "Enter your password",
-            obscureText: true,
-            prefixIcon: Icons.lock,
-          ),
+          PasswordInputField(label: "Password", hint: "Enter your password"),
           const SizedBox(height: 10),
           CustomRow(
             onPressed: () {
-             Navigator.pushNamed(context, Routes.forgotPassword);
+              Navigator.pushNamed(context, Routes.forgotPassword);
             },
             textButtonText: "Forgot Password?",
             checkboxText: "Remember me",

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/ui/buttons.dart';
-import 'package:food_app/features/auth/presentation/widgets/text_form_field.dart';
+import 'package:food_app/core/ui/inputs.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({super.key});
@@ -13,30 +13,26 @@ class SignUpForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 15),
-          AppTextFormField(
+          TextInputField(
             label: "Full Name",
-            hintText: "Enter your full name",
-            prefixIcon: Icons.person,
+            hint: "Enter your full name",
+            icon: Icons.person,
           ),
           const SizedBox(height: 15),
-          AppTextFormField(
+          TextInputField(
             label: "Email",
-            hintText: "Enter your email",
-            prefixIcon: Icons.person,
+            hint: "Enter your email",
+            icon: Icons.person,
           ),
           const SizedBox(height: 15),
-          AppTextFormField(
+          PasswordInputField(
             label: "Password",
-            hintText: "Enter your password",
-            obscureText: true,
-            prefixIcon: Icons.lock,
+            hint: "Enter your password",
           ),
           const SizedBox(height: 15),
-          AppTextFormField(
+          PasswordInputField(
             label: "Confirm Password",
-            hintText: "Re-enter your password",
-            obscureText: true,
-            prefixIcon: Icons.lock,
+            hint: "Re-enter your password",
           ),
           const SizedBox(height: 30),
           Buttons.fill(onPressed: () {
