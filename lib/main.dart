@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/features/chef/food/presentation/item_details_screen.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:path_provider/path_provider.dart';
