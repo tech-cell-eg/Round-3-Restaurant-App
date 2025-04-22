@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "406014420922",
+    "project_id": "round3-restaurant-app",
+    "storage_bucket": "round3-restaurant-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406014420922:android:8f4ba8e5daa05a6e789f83",
+        "android_client_info": {
+          "package_name": "com.example.food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf_mmRc04cMBBUeUt1f8PWkVahvCor-lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
