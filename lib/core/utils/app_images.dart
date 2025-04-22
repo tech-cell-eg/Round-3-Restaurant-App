@@ -234,6 +234,10 @@ class AppImages {
   /// assets/images/food/vegetables.jpeg
   static const String assetsImagesFoodVegetables = "assets/images/food/vegetables.jpeg";
 
+  /// Assets for assetsImagesLogo
+  /// assets/images/Logo.png
+  static const String assetsImagesLogo = "assets/images/Logo.png";
+
   /// Assets for assetsImagesOnboardingOnboarding1
   /// assets/images/onboarding/onboarding-1.png
   static const String assetsImagesOnboardingOnboarding1 = "assets/images/onboarding/onboarding-1.png";
