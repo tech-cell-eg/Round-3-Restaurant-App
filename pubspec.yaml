@@ -38,7 +38,8 @@ dependencies:
   equatable: ^2.0.7
   flutter_bloc: ^9.1.0
   path_provider: ^2.1.5
-  hydrated_bloc: ^10.0.0
+  hydrated_bloc:
+    ^10.0.0
 
     # UI
   skeletonizer: ^1.4.3
@@ -52,6 +53,7 @@ dependencies:
   dio: ^5.8.0+1
   image_picker: ^1.1.2
   shared_preferences: ^2.5.3
+  flutter_native_splash: ^2.4.6
   internet_connection_checker_plus: ^2.7.1
 
 dev_dependencies:
@@ -105,7 +107,7 @@ fonts:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:
-  assets_path: 
+  assets_path:
     - assets/icons/
     - assets/images/
     - assets/images/onboarding/
@@ -113,4 +115,3 @@ flutter_assets:
   output_path: lib/core/utils/
   filename: app_images.dart
   classname: AppImages
-
