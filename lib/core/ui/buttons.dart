@@ -50,5 +50,5 @@ class Buttons {
   static Widget text({
     required void Function()? onPressed,
     required String label,
-  }) => TextButton(onPressed: onPressed, child: Text(label));
+  }) => TextButton(onPressed: onPressed, child: Text(label, style: TextStyle(color: AppColor.kPrimaryColor)));
 }

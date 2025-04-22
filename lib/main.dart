@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/features/profile/presentation/profile_screen.dart';
+import 'package:food_app/features/chef/food/presentation/item_details_screen.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:food_app/core/constants/routes.dart';
-import 'package:food_app/features/profile/model/user.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/helper/shared_preference.dart';
-import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
+import 'package:food_app/core/firebase/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await SharedPreference.initialize();
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: HydratedStorageDirectory(
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          initialRoute: Routes.foodBurger,
+          // initialRoute: Routes.foodBurger,
+          home: ItemDetailsScreen(), // Replace with your initial screen widget
         );
       },
     );
