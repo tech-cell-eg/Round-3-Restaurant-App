@@ -39,8 +39,7 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          // initialRoute: Routes.foodBurger,
-          home: ItemDetailsScreen(), // Replace with your initial screen widget
+          initialRoute: Routes.foodBurger,
         );
       },
     );
