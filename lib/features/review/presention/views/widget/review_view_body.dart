@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:food_app/core/utils/app_color.dart';
-import 'package:food_app/core/utils/app_images.dart';
-import 'package:food_app/core/utils/app_text_style.dart';
-
 import 'package:food_app/features/review/presention/views/widget/custom_app_bar_review.dart';
 import 'package:food_app/features/review/presention/views/widget/custom_card_view.dart';
 

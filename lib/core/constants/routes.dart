@@ -3,6 +3,7 @@ import 'package:food_app/empty.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:food_app/features/cheef_menu/presention/views/cheef_view.dart';
+import 'package:food_app/features/chef_home/presention/views/chef_home_view.dart';
 import 'package:food_app/features/food_burger/presentaion/views/food_burger_view.dart';
 import 'package:food_app/features/home/presentation/view/home_view.dart';
 import 'package:food_app/features/review/presention/views/review.view.dart';
@@ -19,12 +20,14 @@ class Routes {
   static const bottom = "bottom";
   static const String chefMenu = "chef_menu";
   static const String review = "review";
+  static const String chefHome = "chefHome";
   static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       
       case chefMenu:
         return MaterialPageRoute(builder: (_) => ChefMenuView());
-
+case chefHome:
+        return MaterialPageRoute(builder: (_) => ChefHomeView());
   case review:
         return MaterialPageRoute(builder: (_) => ReviewView());
 case bottom:
