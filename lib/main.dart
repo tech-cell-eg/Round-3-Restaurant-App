@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/features/profile/presentation/profile_screen.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:food_app/core/constants/routes.dart';
-import 'package:food_app/features/profile/model/user.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/helper/shared_preference.dart';
-import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
