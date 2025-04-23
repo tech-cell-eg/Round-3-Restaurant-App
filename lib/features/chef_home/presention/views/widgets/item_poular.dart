@@ -14,7 +14,7 @@ class ItemPopular extends StatelessWidget {
       decoration: boxDecorationCard(),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.r),
-        child: Image.asset(AppImages.assetsImagesResturant, fit: BoxFit.fill),
+        child: Image.asset(AppImages.assetsImagesRestaurant, fit: BoxFit.fill),
       ),
     );
   }

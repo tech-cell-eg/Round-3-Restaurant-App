@@ -6,9 +6,7 @@ import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class CustomAppBarMenu extends StatelessWidget {
-  const CustomAppBarMenu({
-    super.key,
-  });
+  const CustomAppBarMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +17,7 @@ class CustomAppBarMenu extends StatelessWidget {
           image: AppImages.assetsIconsBack,
           backColor: AppColor.kGreyColor,
         ),
-        Text(
-          "Profile",
-          style: AppTextStyle.textStyle16.copyWith(fontSize: 17.sp),
-        ),
+        Text("Profile", style: AppTextStyle.subTitle.copyWith(fontSize: 17.sp)),
         Spacer(),
         CustomIconImageAvatar(
           image: AppImages.assetsIconsMore,

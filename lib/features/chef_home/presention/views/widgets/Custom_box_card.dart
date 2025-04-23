@@ -24,13 +24,10 @@ class CustomBoxCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(
-            number,
-            style: AppTextStyle.textStyle24.copyWith(fontSize: 52.sp),
-          ),
+          Text(number, style: AppTextStyle.header.copyWith(fontSize: 52.sp)),
           Text(
             title,
-            style: AppTextStyle.textStyle13.copyWith(
+            style: AppTextStyle.description.copyWith(
               color: AppColor.kItemColor,
             ),
           ),

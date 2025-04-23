@@ -17,7 +17,7 @@ class CustomAppBarReview extends StatelessWidget {
           image: AppImages.assetsIconsBack,
           backColor: AppColor.kGreyColor,
         ),
-        Text("Review", style: AppTextStyle.textStyle16.copyWith(fontSize: 17)),
+        Text("Review", style: AppTextStyle.subTitle.copyWith(fontSize: 17)),
       ],
     );
   }

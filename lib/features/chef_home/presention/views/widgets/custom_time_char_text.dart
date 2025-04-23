@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
@@ -11,7 +10,7 @@ class CustomTimeCharText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       time,
-      style: AppTextStyle.textStyle14.copyWith(color: AppColor.kItemColor),
+      style: AppTextStyle.description.copyWith(color: AppColor.kItemColor),
     );
   }
 }

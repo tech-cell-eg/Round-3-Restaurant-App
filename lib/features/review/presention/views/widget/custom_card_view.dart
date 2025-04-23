@@ -45,7 +45,7 @@ class CustomCardReview extends StatelessWidget {
                   children: [
                     Text(
                       "20/12/2020",
-                      style: AppTextStyle.textStyle16.copyWith(
+                      style: AppTextStyle.subTitle.copyWith(
                         color: AppColor.kItemColor,
                       ),
                     ),
@@ -53,12 +53,12 @@ class CustomCardReview extends StatelessWidget {
                     SvgPicture.asset(AppImages.assetsIconsMore),
                   ],
                 ),
-                Text("Great Food and Service", style: AppTextStyle.textStyle16),
+                Text("Great Food and Service", style: AppTextStyle.subTitle),
                 CustomRating(),
                 SizedBox(height: 8.h),
                 Text(
                   "This Food so tasty & delicious. Breakfast so fast Delivered in my place. Chef is very friendly. I’m really like chef for Home Food Order. Thanks.  I would highly reommend this restaurant to anyone looking for a great dining experience.",
-                  style: AppTextStyle.textStyle16.copyWith(
+                  style: AppTextStyle.subTitle.copyWith(
                     overflow: TextOverflow.visible,
                   ),
                 ),

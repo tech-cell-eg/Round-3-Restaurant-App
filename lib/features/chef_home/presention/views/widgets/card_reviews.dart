@@ -6,9 +6,7 @@ import 'package:food_app/core/utils/box_decoration_card.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/custom_text_primary_color.dart';
 
 class CardReviews extends StatelessWidget {
-  const CardReviews({
-    super.key,
-  });
+  const CardReviews({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,33 +20,27 @@ class CardReviews extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Reviews", style: AppTextStyle.textStyle14),
+              Text("Reviews", style: AppTextStyle.description),
               CustomTextPrimaryColor(title: "See All Reviews"),
             ],
           ),
           Row(
             spacing: 5.w,
             children: [
-              Icon(
-                Icons.star,
-                color: AppColor.kPrimaryColor,
-                size: 25.5.w,
-              ),
+              Icon(Icons.star, color: AppColor.kPrimaryColor, size: 25.5.w),
               Text(
                 "4.9",
-                style: AppTextStyle.textStyle24.copyWith(
+                style: AppTextStyle.header.copyWith(
                   fontSize: 21,
                   color: AppColor.kPrimaryColor,
                 ),
               ),
               SizedBox(width: 10.w),
-              Text("Total 20 Reviews", style: AppTextStyle.textStyle14),
+              Text("Total 20 Reviews", style: AppTextStyle.description),
             ],
           ),
         ],
       ),
     );
   }
-
- 
 }

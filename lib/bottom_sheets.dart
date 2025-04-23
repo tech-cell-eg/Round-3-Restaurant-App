@@ -9,7 +9,8 @@ class SlidingBottomSheetOrders extends StatefulWidget {
   const SlidingBottomSheetOrders({super.key});
 
   @override
-  _SlidingBottomSheetOrdersState createState() => _SlidingBottomSheetOrdersState();
+  _SlidingBottomSheetOrdersState createState() =>
+      _SlidingBottomSheetOrdersState();
 }
 
 class _SlidingBottomSheetOrdersState extends State<SlidingBottomSheetOrders> {
@@ -100,14 +101,14 @@ class ItemBottomSheet extends StatelessWidget {
             children: [
               Text(
                 "#Breakfast",
-                style: AppTextStyle.textStyle14.copyWith(
+                style: AppTextStyle.description.copyWith(
                   color: AppColor.kPrimaryColor,
                 ),
               ),
-              Text("Chicken Thai Biriyani", style: AppTextStyle.textStyle14),
+              Text("Chicken Thai Biriyani", style: AppTextStyle.description),
               Text(
                 "ID: 32053",
-                style: AppTextStyle.textStyle14.copyWith(
+                style: AppTextStyle.description.copyWith(
                   color: AppColor.kItemColor,
                 ),
               ),
@@ -115,7 +116,7 @@ class ItemBottomSheet extends StatelessWidget {
               Row(
                 spacing: 8.w,
                 children: [
-                  Text("\$60", style: AppTextStyle.textStyle14),
+                  Text("\$60", style: AppTextStyle.description),
                   SizedBox(width: 10.w),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -127,7 +128,7 @@ class ItemBottomSheet extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Done",
-                      style: AppTextStyle.textStyle13.copyWith(
+                      style: AppTextStyle.description.copyWith(
                         color: AppColor.kWhiteColor,
                       ),
                     ),
@@ -145,7 +146,7 @@ class ItemBottomSheet extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Cancel",
-                      style: AppTextStyle.textStyle14.copyWith(
+                      style: AppTextStyle.description.copyWith(
                         color: AppColor.kPrimaryColor,
                       ),
                     ),

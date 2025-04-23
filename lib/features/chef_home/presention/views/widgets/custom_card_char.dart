@@ -25,10 +25,10 @@ class CustomCardChar extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Text("Total Revenue", style: AppTextStyle.textStyle14),
+                  Text("Total Revenue", style: AppTextStyle.description),
                   Text(
                     "\$2,241",
-                    style: AppTextStyle.textStyle24.copyWith(fontSize: 22),
+                    style: AppTextStyle.header.copyWith(fontSize: 22),
                   ),
                 ],
               ),
@@ -45,7 +45,7 @@ class CustomCardChar extends StatelessWidget {
                   spacing: 5.w,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Daily", style: AppTextStyle.textStyle14),
+                    Text("Daily", style: AppTextStyle.description),
                     SvgPicture.asset(
                       AppImages.assetsIconsUnderArrow,
                       width: 10.w,
@@ -54,7 +54,7 @@ class CustomCardChar extends StatelessWidget {
                   ],
                 ),
               ),
-              CustomTextPrimaryColor(title: "See Details",),
+              CustomTextPrimaryColor(title: "See Details"),
             ],
           ),
 
@@ -65,5 +65,3 @@ class CustomCardChar extends StatelessWidget {
     );
   }
 }
-
-

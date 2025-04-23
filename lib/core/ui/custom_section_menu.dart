@@ -8,7 +8,8 @@ class CustomSectionMenu extends StatelessWidget {
   const CustomSectionMenu({
     super.key,
     required this.title,
-    required this.image, required this.colorImage,
+    required this.image,
+    required this.colorImage,
   });
   final String title;
   final String image;
@@ -24,7 +25,7 @@ class CustomSectionMenu extends StatelessWidget {
           backColor: AppColor.kWhiteColor,
           colorImage: colorImage,
         ),
-        Text(title, style: AppTextStyle.textStyle16),
+        Text(title, style: AppTextStyle.subTitle),
         Spacer(),
         IconButton(
           onPressed: () {},

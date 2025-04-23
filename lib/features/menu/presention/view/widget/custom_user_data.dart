@@ -5,9 +5,7 @@ import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class CustomUserData extends StatelessWidget {
-  const CustomUserData({
-    super.key,
-  });
+  const CustomUserData({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +19,10 @@ class CustomUserData extends StatelessWidget {
         ),
         Column(
           children: [
-            Text("Vishal Khadok", style: AppTextStyle.textStyle20),
+            Text("Vishal Khadok", style: AppTextStyle.header),
             Text(
               "I love fast food",
-              style: AppTextStyle.textStyle20.copyWith(
-                color: AppColor.kItemColor,
-              ),
+              style: AppTextStyle.header.copyWith(color: AppColor.kItemColor),
             ),
           ],
         ),

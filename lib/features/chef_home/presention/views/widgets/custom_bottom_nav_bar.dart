@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/chef_home_view_body.dart';
-import 'package:food_app/features/food_burger/presentaion/views/food_burger_view.dart';
+import 'package:food_app/features/food_burger/presentation/views/food_burger_view.dart';
 import 'package:food_app/features/home/presentation/view/home_view.dart';
 import 'package:food_app/features/menu/presention/view/menu_view.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';

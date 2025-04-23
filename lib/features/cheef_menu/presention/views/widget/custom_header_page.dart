@@ -6,9 +6,7 @@ import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class CustomHeaderPage extends StatelessWidget {
-  const CustomHeaderPage({
-    super.key,
-  });
+  const CustomHeaderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +34,7 @@ class CustomHeaderPage extends StatelessWidget {
                 ),
                 Text(
                   "My Profile",
-                  style: AppTextStyle.textStyle16.copyWith(
+                  style: AppTextStyle.subTitle.copyWith(
                     fontSize: 17,
                     color: AppColor.kWhiteColor,
                   ),
@@ -46,15 +44,15 @@ class CustomHeaderPage extends StatelessWidget {
             SizedBox(height: 35.h),
             Text(
               "Available Balance",
-              style: AppTextStyle.textStyle16.copyWith(
+              style: AppTextStyle.subTitle.copyWith(
                 color: AppColor.kWhiteColor,
               ),
             ),
             Text(
               "\$500.00",
-              style: AppTextStyle.textStyle24.copyWith(
+              style: AppTextStyle.header.copyWith(
                 fontSize: 40.sp,
-    
+
                 color: AppColor.kWhiteColor,
               ),
             ),
@@ -69,7 +67,7 @@ class CustomHeaderPage extends StatelessWidget {
               ),
               child: Text(
                 "Withdraw",
-                style: AppTextStyle.textStyle14.copyWith(
+                style: AppTextStyle.description.copyWith(
                   color: AppColor.kWhiteColor,
                 ),
               ),

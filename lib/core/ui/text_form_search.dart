@@ -13,7 +13,7 @@ class TextFormSearch extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         labelText: 'Search ',
-        labelStyle: AppTextStyle.textStyle14.copyWith(
+        labelStyle: AppTextStyle.description.copyWith(
           color: AppColor.kItemColor,
         ),
         prefixIcon: Icon(

@@ -10,7 +10,7 @@ class CustomTextPrimaryColor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: AppTextStyle.textStyle14.copyWith(
+      style: AppTextStyle.description.copyWith(
         color: AppColor.kPrimaryColor,
         decoration: TextDecoration.underline,
         decorationColor: AppColor.kPrimaryColor, // لون الخط (اختياري)

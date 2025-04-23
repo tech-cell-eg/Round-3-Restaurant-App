@@ -35,11 +35,11 @@ class HistoryAndNumberOfOrder extends StatelessWidget {
                 backColor: AppColor.kWhiteColor,
                 colorImage: Color(0xff413DFB),
               ),
-              Text('Number of Orders', style: AppTextStyle.textStyle16),
+              Text('Number of Orders', style: AppTextStyle.subTitle),
               Spacer(),
               Text(
                 '29K',
-                style: AppTextStyle.textStyle16.copyWith(
+                style: AppTextStyle.subTitle.copyWith(
                   color: AppColor.kItemColor,
                 ),
               ),

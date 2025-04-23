@@ -7,9 +7,7 @@ import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class CustomAppBarChefHome extends StatelessWidget {
-  const CustomAppBarChefHome({
-    super.key,
-  });
+  const CustomAppBarChefHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +20,15 @@ class CustomAppBarChefHome extends StatelessWidget {
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-    
+
           children: [
             Text(
               "Deliver to",
-              style: AppTextStyle.textStyle12.copyWith(
-                color: AppColor.kPrimaryColor,
-              ),
+              style: AppTextStyle.label.copyWith(color: AppColor.kPrimaryColor),
             ),
             Row(
               children: [
-                Text("Halal Lab office", style: AppTextStyle.textStyle14),
+                Text("Halal Lab office", style: AppTextStyle.description),
                 SvgPicture.asset(
                   AppImages.assetsIconsPolygon,
                   width: 11.w,
