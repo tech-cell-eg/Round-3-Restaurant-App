@@ -45,14 +45,14 @@ class TextInputField extends StatelessWidget {
           maxLines: lines,
           decoration: InputDecoration(
             hintText: hint,
-            hintStyle: const TextStyle(color: AppColor.kPrimaryDark),
+            hintStyle: const TextStyle(color: AppColor.kItemColor),
             filled: true,
             fillColor: AppColor.kGreyColor,
             prefixIcon:
                 icon != null
                     ? Padding(
                       padding: const EdgeInsets.all(12.0),
-                      child: Icon(icon, color: AppColor.kPrimaryDark, size: 24),
+                      child: Icon(icon, color: AppColor.kItemColor, size: 24),
                     )
                     : null,
             border: OutlineInputBorder(
