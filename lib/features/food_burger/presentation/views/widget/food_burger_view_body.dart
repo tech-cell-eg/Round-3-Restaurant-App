@@ -15,7 +15,7 @@ class FoodBurgerViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 24.h),
+            SizedBox(height: 40.h),
 
             AppBarFoodBurger(),
             SizedBox(height: 24.h),

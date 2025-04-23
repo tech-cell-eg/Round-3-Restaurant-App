@@ -13,7 +13,7 @@ class CustomBoxCard extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       height: 115.1.h,
-      width: 156.96.w,
+      width: 157.96.w,
       decoration: BoxDecoration(
         color: AppColor.kGreyColor.withValues(alpha: 0.2),
         border: Border.all(
@@ -24,7 +24,7 @@ class CustomBoxCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(number, style: AppTextStyle.header.copyWith(fontSize: 52.sp)),
+          Text(number, style: AppTextStyle.header.copyWith(fontSize: 40.sp)),
           Text(
             title,
             style: AppTextStyle.description.copyWith(

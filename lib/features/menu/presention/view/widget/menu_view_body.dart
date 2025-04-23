@@ -18,6 +18,8 @@ class MenuViewBody extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 24.0.sp, vertical: 10.h),
         child: Column(
           children: [
+            SizedBox(height: 24.h),
+
             CustomAppBarMenu(),
             SizedBox(height: 24.h),
             CustomUserData(),

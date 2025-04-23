@@ -21,10 +21,7 @@ class CustomIconImageAvatar extends StatelessWidget {
       child: SvgPicture.asset(
         image,
 
-        colorFilter: const ColorFilter.mode(
-          AppColor.kBlackColor,
-          BlendMode.srcIn,
-        ),
+        color: colorImage ?? AppColor.kBlackColor,
       ),
     );
   }

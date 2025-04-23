@@ -8,7 +8,6 @@ import 'package:food_app/features/chef_home/presention/views/widgets/card_popula
 import 'package:food_app/features/chef_home/presention/views/widgets/card_reviews.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/custom_app_bar_chef_home.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/custom_card_char.dart';
-import 'package:food_app/features/chef_home/presention/views/widgets/custom_title_card_poplar.dart';
 
 class ChefHomeViewBody extends StatelessWidget {
   const ChefHomeViewBody({super.key});
@@ -16,15 +15,15 @@ class ChefHomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      padding: EdgeInsets.symmetric(horizontal: 24.0.w),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 15.h),
+            SizedBox(height: 40.h),
             CustomAppBarChefHome(),
             SizedBox(height: 20.h),
             Row(
-              spacing: 13.4.w,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomBoxCard(number: '20', title: "Running Orders"),
                 CustomBoxCard(number: '05', title: "Order Request"),
@@ -42,8 +41,3 @@ class ChefHomeViewBody extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

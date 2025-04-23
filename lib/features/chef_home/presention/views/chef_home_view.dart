@@ -10,8 +10,7 @@ class ChefHomeView extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavBar(),
 
-      body: ChefHomeViewBody(),
+      body: SafeArea(child: ChefHomeViewBody()),
     );
   }
 }
-
