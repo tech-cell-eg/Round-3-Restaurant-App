@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/ui/buttons.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/features/address/model/address_model.dart';
 import 'package:food_app/features/address/screen/edit_screen.dart';
 import 'package:food_app/features/address/widget/address_card_screen.dart';
@@ -32,7 +33,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
     ),
   ];
 
-  void _navigateToAddEditAddress({Address? address}) async {
+  void navigateToAddEditAddress({Address? address}) async {
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
@@ -64,12 +65,13 @@ class _AddressListScreenState extends State<AddressListScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
+            onTap:(){}, 
+            //() => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 40,
               backgroundColor: const Color.fromARGB(255, 219, 225, 231),
               child: SvgPicture.asset(
-                "assets/icons/back.svg",
+                AppImages.assetsIconsBack,
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,
@@ -82,7 +84,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 16),
             child: TextButton(
-              onPressed: () => _navigateToAddEditAddress(),
+              onPressed: () => navigateToAddEditAddress(),
               child: const Text(
                 'Add New Address',
                 style: TextStyle(color: Colors.white),
@@ -109,7 +111,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
                       });
                     },
                     onEdit: () {
-                      _navigateToAddEditAddress(address: address);
+                      navigateToAddEditAddress(address: address);
                     },
                   );
                 },
@@ -117,7 +119,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
             ),
             const SizedBox(height: 16),
             Buttons.fill(
-              onPressed: () => _navigateToAddEditAddress(),
+              onPressed: () => navigateToAddEditAddress(),
               label: "Add New Address",
               fontSize: 18,
             ),

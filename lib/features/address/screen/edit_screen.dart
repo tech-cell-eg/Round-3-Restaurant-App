@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/ui/buttons.dart';
 import 'package:food_app/core/ui/inputs.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
+import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:food_app/features/address/model/address_model.dart';
 
 class AddEditAddressScreen extends StatefulWidget {
@@ -20,8 +22,8 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
   late TextEditingController _streetController;
   late TextEditingController _postCodeController;
   late TextEditingController _apartmentController;
-  late String _selectedLabel;
-  bool _isLoading = false;
+  late String selectedLabel;
+  bool isLoading = false;
 
   @override
   void initState() {
@@ -39,7 +41,7 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
     _apartmentController = TextEditingController(
       text: widget.address?.apartment ?? '',
     );
-    _selectedLabel = widget.address?.label.toLowerCase() ?? 'home';
+    selectedLabel = widget.address?.label.toLowerCase() ?? 'home';
   }
 
   @override
@@ -53,22 +55,22 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
 
   Future<void> _saveAddress() async {
     if (_formKey.currentState!.validate()) {
-      setState(() => _isLoading = true);
+      setState(() => isLoading = true);
 
       // Simulate network delay
       await Future.delayed(const Duration(seconds: 1));
 
-      final newAddress = Address(
-        id: widget.address?.id ?? DateTime.now().toString(),
-        label: _selectedLabel.toUpperCase(),
-        fullAddress: _addressController.text,
-        street: _streetController.text,
-        postCode: _postCodeController.text,
-        apartment: _apartmentController.text,
-      );
+      // final newAddress = Address(
+      //   id: widget.address?.id ?? DateTime.now().toString(),
+      //   label: selectedLabel.toUpperCase(),
+      //   fullAddress: _addressController.text,
+      //   street: _streetController.text,
+      //   postCode: _postCodeController.text,
+      //   apartment: _apartmentController.text,
+      // );
 
-      setState(() => _isLoading = false);
-      Navigator.pop(context, newAddress);
+      setState(() => isLoading = false);
+      // Navigator.pop(context, newAddress);
     }
   }
 
@@ -83,12 +85,13 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () {},
+            //() => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 40,
               backgroundColor: const Color.fromARGB(255, 219, 225, 231),
               child: SvgPicture.asset(
-                "assets/icons/back.svg",
+                AppImages.assetsIconsBack,
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,
@@ -163,19 +166,21 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
                 },
               ),
               const SizedBox(height: 16),
-              const Text(
+              Text(
                 'LABEL AS',
-                style: TextStyle(fontSize: 14, color: AppColor.kPrimaryDark),
+                style: AppTextStyle.description.copyWith(
+                  color: AppColor.kPrimaryDark,
+                ),
               ),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  _buildLabelChip('Home'),
+                  buildLabelChip('Home'),
                   const SizedBox(width: 8),
-                  _buildLabelChip('Work'),
+                  buildLabelChip('Work'),
                   const SizedBox(width: 8),
-                  _buildLabelChip('Other'),
+                  buildLabelChip('Other'),
                 ],
               ),
               const SizedBox(height: 30),
@@ -184,7 +189,7 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
                 onPressed: _saveAddress,
                 label:
                     widget.address == null ? 'SAVE ADDRESS' : 'UPDATE ADDRESS',
-                isLoading: _isLoading,
+                isLoading: isLoading,
                 fontSize: 15,
               ),
             ],
@@ -194,22 +199,21 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
     );
   }
 
-  Widget _buildLabelChip(String label) {
+  Widget buildLabelChip(String label) {
     return ChoiceChip(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
       label: Text(label),
-      selected: _selectedLabel == label.toLowerCase(),
+      selected: selectedLabel == label.toLowerCase(),
       onSelected: (selected) {
         setState(() {
-          _selectedLabel = label.toLowerCase();
+          selectedLabel = label.toLowerCase();
         });
       },
       selectedColor: AppColor.kPrimaryColor,
-      labelStyle: TextStyle(
-        fontSize: 16,
+      labelStyle: AppTextStyle.subTitle.copyWith(
         color:
-            _selectedLabel == label.toLowerCase() ? Colors.white : Colors.black,
+            selectedLabel == label.toLowerCase() ? Colors.white : Colors.black,
       ),
     );
   }

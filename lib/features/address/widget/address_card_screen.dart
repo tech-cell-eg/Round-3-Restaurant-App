@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/features/address/model/address_model.dart';
 
 class AddressCard extends StatelessWidget {
@@ -26,8 +27,8 @@ class AddressCard extends StatelessWidget {
           radius: 24,
           child: SvgPicture.asset(
             address.label == "HOME"
-                ? "assets/icons/home icon.svg"
-                : "assets/icons/work icon.svg",
+                ? AppImages.assetsIconsHome
+                : AppImages.assetsIconsWork,
           ),
         ),
 
@@ -40,11 +41,11 @@ class AddressCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             IconButton(
-              icon: SvgPicture.asset("assets/icons/edit icon.svg"),
+              icon: SvgPicture.asset(AppImages.assetsIconsEdit),
               onPressed: onEdit,
             ),
             IconButton(
-              icon: SvgPicture.asset("assets/icons/Delete icon.svg"),
+              icon: SvgPicture.asset(AppImages.assetsIconsDelete),
               onPressed: onDelete,
             ),
           ],

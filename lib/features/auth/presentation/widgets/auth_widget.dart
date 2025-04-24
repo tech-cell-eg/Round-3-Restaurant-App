@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class AuthScreen extends StatelessWidget {
@@ -36,7 +37,7 @@ class AuthScreen extends StatelessWidget {
                     color: AppColor.kPrimaryDark,
                     image: DecorationImage(
                       image: AssetImage(
-                        "assets/images/auth/background_asset.png",
+                        AppImages.assetsImagesAuthBackgroundAsset,
                       ),
                       fit: BoxFit.fill,
                     ),
@@ -92,7 +93,8 @@ class AuthScreen extends StatelessWidget {
                 top: MediaQuery.of(context).padding.top + 20,
                 left: 20,
                 child: GestureDetector(
-                  onTap: () => Navigator.of(context).pop(),
+                  onTap:(){}, 
+                  //() => Navigator.of(context).pop(),
                   child: CircleAvatar(
                     radius: 20,
                     backgroundColor: AppColor.kGreyColor,
@@ -102,7 +104,7 @@ class AuthScreen extends StatelessWidget {
                         width: 24, // Adjust based on your needs
                         height: 24, // Adjust based on your needs
                         child: SvgPicture.asset(
-                          "assets/icons/back.svg",
+                          AppImages.assetsIconsBack,
                           fit: BoxFit.contain, // Prevents overflow
                         ),
                       ),

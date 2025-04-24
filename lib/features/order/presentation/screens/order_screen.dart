@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/features/order/model/order_model.dart';
 import 'package:food_app/features/order/presentation/widget/order_list.dart';
 import 'package:intl/intl.dart';
@@ -14,12 +15,12 @@ class MyOrdersScreen extends StatefulWidget {
 
 class _MyOrdersScreenState extends State<MyOrdersScreen>
     with SingleTickerProviderStateMixin {
-  late TabController _tabController;
+  late TabController tabController;
   final DateFormat dateFormat = DateFormat('dd MMM, HH:mm');
 
   List<Order> ongoingOrders = [
     Order(
-      image: "assets/images/pizza.jpg",
+      image:AppImages.assetsImagesPizza,
       id: '162432',
       restaurant: 'Pizza Hut',
       price: 35.25,
@@ -29,7 +30,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
       date: DateTime(2023, 1, 29, 12, 30),
     ),
     Order(
-      image: "assets/images/pizza.jpg",
+      image:AppImages.assetsImagesPizza,
       id: '242432',
       restaurant: 'McDonald',
       price: 40.15,
@@ -42,7 +43,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
 
   List<Order> historyOrders = [
     Order(
-      image: "assets/images/pizza.jpg",
+      image:AppImages.assetsImagesPizza,
       id: '240112',
       restaurant: 'Starbucks',
       price: 10.20,
@@ -53,7 +54,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
     ),
 
     Order(
-      image: "assets/images/pizza.jpg",
+      image:AppImages.assetsImagesPizza,
       id: '240112',
       restaurant: 'Starbucks',
       price: 10.20,
@@ -67,12 +68,12 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    tabController = TabController(length: 2, vsync: this);
   }
 
   @override
   void dispose() {
-    _tabController.dispose();
+    tabController.dispose();
     super.dispose();
   }
 
@@ -112,12 +113,13 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () {},
+            // () => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 40,
               backgroundColor: const Color.fromARGB(255, 219, 225, 231),
               child: SvgPicture.asset(
-                "assets/icons/back.svg",
+                AppImages.assetsIconsBack,
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,
@@ -127,12 +129,13 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
         ),
         actions: [
           GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () {},
+            //() => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 20,
               backgroundColor: const Color.fromARGB(255, 219, 225, 231),
               child: SvgPicture.asset(
-                "assets/icons/more_vector.svg",
+                AppImages.assetsIconsMoreVector,
                 width: 5,
                 height: 5,
                 fit: BoxFit.contain,
@@ -143,7 +146,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
         ],
         title: const Text('My Orders'),
         bottom: TabBar(
-          controller: _tabController,
+          controller: tabController,
           tabs: const [Tab(text: 'Ongoing'), Tab(text: 'History')],
           indicatorColor: AppColor.kPrimaryColor,
           labelColor: AppColor.kPrimaryColor,
@@ -151,7 +154,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
         ),
       ),
       body: TabBarView(
-        controller: _tabController,
+        controller: tabController,
         children: [
           OrderList(
             orders: ongoingOrders,

@@ -1,5 +1,6 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
@@ -22,10 +23,10 @@ class ProfileInfoView extends StatelessWidget {
             ),
             title: "Personal Info",
             onPressed:
-                () => Navigator.push(
+                () => Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(builder: (_) => ProfileEditScreen()),
-                ),
+                  Routes.editProfile,),
+                
           ),
           ProfileListTile(
             icon: SvgPicture.asset(
