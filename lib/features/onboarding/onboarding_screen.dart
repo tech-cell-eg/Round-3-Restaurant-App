@@ -82,7 +82,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
             Expanded(
-              flex:2,
+              flex: 2,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32.w),
                 child: Column(

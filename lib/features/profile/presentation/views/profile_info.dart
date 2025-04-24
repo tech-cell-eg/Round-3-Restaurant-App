@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
 import 'package:food_app/features/profile/presentation/widgets/profile_card.dart';
 import 'package:food_app/features/profile/presentation/widgets/profile_list_tile.dart';
 
@@ -22,11 +21,7 @@ class ProfileInfoView extends StatelessWidget {
               height: 18.h,
             ),
             title: "Personal Info",
-            onPressed:
-                () => Navigator.pushNamed(
-                  context,
-                  Routes.editProfile,),
-                
+            onPressed: () => Navigator.pushNamed(context, Routes.editProfile),
           ),
           ProfileListTile(
             icon: SvgPicture.asset(
@@ -35,7 +30,9 @@ class ProfileInfoView extends StatelessWidget {
               height: 18.h,
             ),
             title: "Addresses",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.address);
+            },
           ),
         ],
       ),

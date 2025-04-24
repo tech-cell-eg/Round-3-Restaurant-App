@@ -1,9 +1,17 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:food_app/features/chef/food/presentation/item_details_screen.dart';
 import 'package:food_app/features/chef/my_food/model/food_model.dart';
 import 'package:food_app/features/chef/my_food/widgets/food_item.dart';
 
-Widget buildFoodList(List<FoodItem> items) {
-    return Column(
+Widget buildFoodList(List<FoodItem> items, BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ItemDetailsScreen()),
+      );
+    },
+    child: Column(
       children: [
         const SizedBox(height: 16),
         Padding(
@@ -27,5 +35,6 @@ Widget buildFoodList(List<FoodItem> items) {
           ),
         ),
       ],
-    );
-  }
+    ),
+  );
+}

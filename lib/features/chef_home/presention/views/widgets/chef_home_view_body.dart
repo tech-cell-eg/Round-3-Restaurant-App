@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/Custom_box_card.dart';
+import 'package:food_app/features/chef_home/presention/views/widgets/bottom_sheets.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/card_popular_item.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/card_reviews.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/custom_app_bar_chef_home.dart';
@@ -22,7 +23,18 @@ class ChefHomeViewBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomBoxCard(number: '20', title: "Running Orders"),
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet<void>(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return const ItemBottomSheet();
+                      },
+                    );
+                  },
+                  child: CustomBoxCard(number: '20', title: "Running Orders"),
+                ),
+
                 CustomBoxCard(number: '05', title: "Order Request"),
               ],
             ),

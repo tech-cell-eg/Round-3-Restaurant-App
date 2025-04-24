@@ -17,7 +17,7 @@ class MyFoodScreenState extends State<MyFoodScreen>
   late TabController _tabController;
   final List<FoodItem> allFoodItems = [
     FoodItem(
-      image:AppImages.assetsImagesPizza,
+      image: AppImages.assetsImagesPizza,
       name: "Chicken Thai Biriyani",
       category: "Breakfast",
       price: 60,
@@ -25,7 +25,7 @@ class MyFoodScreenState extends State<MyFoodScreen>
       reviewCount: 10,
     ),
     FoodItem(
-      image:AppImages.assetsImagesPizza,
+      image: AppImages.assetsImagesPizza,
       name: "Chicken Bhuna",
       category: "Breakfast",
       price: 30,
@@ -33,7 +33,7 @@ class MyFoodScreenState extends State<MyFoodScreen>
       reviewCount: 10,
     ),
     FoodItem(
-      image:AppImages.assetsImagesPizza,
+      image: AppImages.assetsImagesPizza,
       name: "Mazalichiken Halim",
       category: "Breakfast",
       price: 25,
@@ -41,7 +41,7 @@ class MyFoodScreenState extends State<MyFoodScreen>
       reviewCount: 10,
     ),
     FoodItem(
-      image:AppImages.assetsImagesPizza,
+      image: AppImages.assetsImagesPizza,
       name: "Vegetable Salad",
       category: "Lunch",
       price: 15,
@@ -49,7 +49,7 @@ class MyFoodScreenState extends State<MyFoodScreen>
       reviewCount: 8,
     ),
     FoodItem(
-      image:AppImages.assetsImagesPizza,
+      image: AppImages.assetsImagesPizza,
       name: "Beef Steak",
       category: "Dinner",
       price: 45,
@@ -96,7 +96,7 @@ class MyFoodScreenState extends State<MyFoodScreen>
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: (){},
+            onTap: () {},
             //() => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 40,
@@ -126,10 +126,10 @@ class MyFoodScreenState extends State<MyFoodScreen>
       body: TabBarView(
         controller: _tabController,
         children: [
-          buildFoodList(getFilteredItems(0)),
-          buildFoodList(getFilteredItems(1)),
-          buildFoodList(getFilteredItems(2)),
-          buildFoodList(getFilteredItems(3)),
+          buildFoodList(getFilteredItems(0), context),
+          buildFoodList(getFilteredItems(1), context),
+          buildFoodList(getFilteredItems(2), context),
+          buildFoodList(getFilteredItems(3), context),
         ],
       ),
     );

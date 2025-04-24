@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          initialRoute: Routes.chefHome,
+          initialRoute: Routes.onboard,
         );
       },
     );

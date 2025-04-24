@@ -1,4 +1,4 @@
-import 'package:food_app/bottom_sheets.dart';
+// import 'package:food_app/features/chef_home/presention/views/widgets/bottom_sheets.dart';
 import 'package:food_app/empty.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/features/address/screen/adrees_screen.dart';
@@ -10,6 +10,7 @@ import 'package:food_app/features/cheef_menu/presention/views/cheef_view.dart';
 import 'package:food_app/features/chef_home/presention/views/chef_home_view.dart';
 import 'package:food_app/features/food_burger/presentation/views/food_burger_view.dart';
 import 'package:food_app/features/home/presentation/view/home_view.dart';
+import 'package:food_app/features/menu/presention/view/menu_view.dart';
 import 'package:food_app/features/my_cart/screen/cart_screen.dart';
 import 'package:food_app/features/order/presentation/screens/order_screen.dart';
 import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
@@ -28,7 +29,8 @@ class Routes {
   static const search = "search";
   static const onboard = "onboard";
   static const foodBurger = "food_burger";
-  static const bottom = "bottom";
+  // static const bottom = "bottom";
+  static const menu = "menu";
   static const String chefMenu = "chef_menu";
   static const String review = "review";
   static const String chefHome = "chefHome";
@@ -37,7 +39,6 @@ class Routes {
   static const String myOrder = "myOrder";
   static const String profile = "profile";
   static const String editProfile = "edit-profile";
-  
 
   static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -47,8 +48,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => ChefHomeView());
       case review:
         return MaterialPageRoute(builder: (_) => ReviewView());
-      case bottom:
-        return MaterialPageRoute(builder: (_) => SlidingBottomSheetOrders());
+      // case bottom:
+      //   return MaterialPageRoute(builder: (_) => SlidingBottomSheetOrders());
       case empty:
         return MaterialPageRoute(builder: (_) => EmptyScreen());
       case foodBurger:
@@ -73,10 +74,12 @@ class Routes {
         return MaterialPageRoute(builder: (_) => CartScreen());
       case myOrder:
         return MaterialPageRoute(builder: (_) => MyOrdersScreen());
-      case profile: 
-        return MaterialPageRoute(builder: (_) => ProfileScreen());  
+      case profile:
+        return MaterialPageRoute(builder: (_) => ProfileScreen());
       case editProfile:
-        return MaterialPageRoute(builder: (_) =>  ProfileEditScreen());  
+        return MaterialPageRoute(builder: (_) => ProfileEditScreen());
+      case menu:
+        return MaterialPageRoute(builder: (_) => MenuView());
       default:
         return MaterialPageRoute(builder: (_) => Scaffold());
     }

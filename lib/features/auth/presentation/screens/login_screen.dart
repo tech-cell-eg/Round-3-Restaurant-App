@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
       body: AuthScreen(
         title: "Login",
         subtitle: "Welcome back! Please login to your account.",
-        form: const LoginForm(),
+        form: SingleChildScrollView(child: LoginForm()),
         formHeightRatio: 0.66,
       ),
     );

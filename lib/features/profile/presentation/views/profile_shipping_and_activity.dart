@@ -1,5 +1,7 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/core/constants/routes.dart';
+import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/features/profile/presentation/widgets/profile_card.dart';
@@ -20,16 +22,22 @@ class ProfileShippingAndActivityView extends StatelessWidget {
               height: 18.h,
             ),
             title: "Cart",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.myCart);
+            },
           ),
           ProfileListTile(
             icon: SvgPicture.asset(
-              AppImages.assetsIconsProfileFavorite,
+              AppImages.assetsIconsMarketIcon,
+              color: AppColor.kPrimaryColor,
+
               width: 18.w,
               height: 18.h,
             ),
-            title: "Favorite",
-            onPressed: () {},
+            title: "Orders",
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.myOrder);
+            },
           ),
           ProfileListTile(
             icon: SvgPicture.asset(
