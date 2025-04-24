@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/features/my_cart/model/cart_model.dart';
 
 class CartItemWidget extends StatelessWidget {
@@ -96,7 +97,7 @@ class CartItemWidget extends StatelessWidget {
             right: 20,
             top: 0,
             child: IconButton(
-              icon: SvgPicture.asset("assets/icons/cancel.svg"),
+              icon: SvgPicture.asset(AppImages.assetsIconsCancel),
               onPressed: onRemove,
             ),
           ),

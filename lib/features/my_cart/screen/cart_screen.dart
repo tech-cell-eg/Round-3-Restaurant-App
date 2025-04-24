@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/features/my_cart/model/cart_model.dart';
 import 'package:food_app/features/my_cart/widget/bottom_widget.dart';
 import 'package:food_app/features/my_cart/widget/cart_item_widget.dart';
@@ -129,12 +130,13 @@ class _CartScreenState extends State<CartScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
+            onTap:(){},
+            // () => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 14,
               backgroundColor: AppColor.kItemColor,
               child: SvgPicture.asset(
-                "assets/icons/back.svg",
+                AppImages.assetsIconsBack,
                 width: 14,
                 height: 14,
                 fit: BoxFit.contain,

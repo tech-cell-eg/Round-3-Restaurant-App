@@ -3,6 +3,7 @@ import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/ui/buttons.dart';
 import 'package:food_app/core/ui/inputs.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:food_app/features/auth/presentation/widgets/custom_row.dart';
 
@@ -53,9 +54,9 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           const CustomRow3(
-            image1: "assets/icons/facebook.svg",
-            image2: "assets/icons/twitter.svg",
-            image3: "assets/icons/appleIcon.svg",
+            image1: AppImages.assetsIconsFacebook,
+            image2: AppImages.assetsIconsTwitter,
+            image3: AppImages.assetsIconsAppleIcon,
           ),
         ],
       ),

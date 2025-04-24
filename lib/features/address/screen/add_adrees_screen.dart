@@ -3,7 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/ui/buttons.dart';
 import 'package:food_app/core/ui/inputs.dart';
 import 'package:food_app/core/utils/app_color.dart';
-import 'package:food_app/features/address/model/address_model.dart';
+import 'package:food_app/core/utils/app_images.dart';
+import 'package:food_app/core/utils/app_text_style.dart';
+
 
 class AddAddressScreen extends StatefulWidget {
   const AddAddressScreen({super.key});
@@ -37,17 +39,17 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
       // Simulate network delay
       await Future.delayed(const Duration(seconds: 1));
 
-      final newAddress = Address(
-        label: selectedLabel.toUpperCase(),
-        fullAddress: addressController.text,
-        street: streetController.text,
-        postCode: postCodeController.text,
-        apartment: apartmentController.text,
-        id: '',
-      );
+      // final newAddress = Address(
+      //   label: selectedLabel.toUpperCase(),
+      //   fullAddress: addressController.text,
+      //   street: streetController.text,
+      //   postCode: postCodeController.text,
+      //   apartment: apartmentController.text,
+      //   id: '',
+      // );
 
       setState(() => isLoading = false);
-      Navigator.pop(context, newAddress);
+      // Navigator.pop(context, newAddress);
     }
   }
 
@@ -60,12 +62,13 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () {},
+            // () => Navigator.of(context).pop(),
             child: CircleAvatar(
               radius: 40,
               backgroundColor: const Color.fromARGB(255, 219, 225, 231),
               child: SvgPicture.asset(
-                "assets/icons/back.svg",
+                AppImages.assetsIconsBack,
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,
@@ -140,10 +143,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                 },
               ),
               const SizedBox(height: 16),
-              const Text(
-                'LABEL AS',
-                style: TextStyle(fontSize: 14, color: AppColor.kPrimaryDark),
-              ),
+              const Text('LABEL AS', style: AppTextStyle.description),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -181,8 +181,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
         });
       },
       selectedColor: AppColor.kPrimaryColor,
-      labelStyle: TextStyle(
-        fontSize: 16,
+      labelStyle: AppTextStyle.subTitle.copyWith(
         color: selectedLabel == label ? Colors.white : Colors.black,
       ),
     );

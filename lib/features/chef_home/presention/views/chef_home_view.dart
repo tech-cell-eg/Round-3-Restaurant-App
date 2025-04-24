@@ -7,10 +7,11 @@ class ChefHomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: CustomBottomNavBar(),
+    return SafeArea(
+      child: Scaffold(
+        bottomNavigationBar: CustomBottomNavBar(),
 
-      body: SafeArea(child: ChefHomeViewBody()),
+      body: SafeArea(child: ChefHomeViewBody())),
     );
   }
 }

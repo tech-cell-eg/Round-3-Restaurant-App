@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/core/utils/app_images.dart';
-import 'package:food_app/core/utils/app_text_style.dart';
-import 'package:food_app/core/utils/box_decoration_card.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/Custom_box_card.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/card_popular_item.dart';
 import 'package:food_app/features/chef_home/presention/views/widgets/card_reviews.dart';

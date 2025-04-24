@@ -9,11 +9,11 @@ class SlidingBottomSheetOrders extends StatefulWidget {
   const SlidingBottomSheetOrders({super.key});
 
   @override
-  _SlidingBottomSheetOrdersState createState() =>
-      _SlidingBottomSheetOrdersState();
+  SlidingBottomSheetOrdersState createState() =>
+      SlidingBottomSheetOrdersState();
 }
 
-class _SlidingBottomSheetOrdersState extends State<SlidingBottomSheetOrders> {
+class SlidingBottomSheetOrdersState extends State<SlidingBottomSheetOrders> {
   final PanelController _panelController = PanelController();
 
   @override
