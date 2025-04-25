@@ -56,22 +56,21 @@ class BurgerCard extends StatelessWidget {
                       children: [
                         Text(
                           '\$${price.toStringAsFixed(0)}',
-                          style: AppTextStyle.title,
-                        ),
-                        // FloatingActionButton(
-                        //   onPressed: () {},
-                        //   mini: true,
-                        //   backgroundColor: Colors.orange,
-                        //   child: Icon(Icons.add, color: Colors.white),
-                        // ),
-                        Container(
-                          height: 30.h,
-                          width: 30.w,
-                          decoration: BoxDecoration(
-                            color: Colors.orange,
-                            borderRadius: BorderRadius.circular(10.r),
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
                           ),
-                          child: const Icon(Icons.add, color: Colors.white),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          style: IconButton.styleFrom(
+                            padding: EdgeInsets.all(8),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            backgroundColor: Colors.orange,
+                          ),
+                          icon: Icon(Icons.add, color: Colors.white),
                         ),
                       ],
                     ),
