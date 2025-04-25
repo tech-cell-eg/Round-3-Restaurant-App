@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/features/restaurant/model/restaurant.dart';
+import 'package:food_app/features/chat/presentation/chat_screen.dart';
 import 'package:food_app/features/restaurant/presentation/view/restaurant_meals.dart';
 import 'package:food_app/features/restaurant/presentation/widgets/restaurant_info.dart';
 
@@ -12,6 +14,21 @@ class RestaurantScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        heroTag: null,
+        onPressed:
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder:
+                    (_) => ChatScreen(
+                      restaurant.id,
+                      restaurantName: restaurant.name,
+                    ),
+              ),
+            ),
+        child: Icon(CupertinoIcons.chat_bubble_2_fill),
+      ),
       body: SingleChildScrollView(
         child: Column(
           spacing: 8.h,
