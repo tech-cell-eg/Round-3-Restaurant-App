@@ -39,7 +39,10 @@ class MyApp extends StatelessWidget {
           ),
           onGenerateRoute: Routes.onGenerateRoute,
           //change this line to required screen name
-          initialRoute: Routes.onboard,
+          initialRoute:
+              SharedPreference.getBool(key: "onboarding") != true
+                  ? Routes.onboard
+                  : Routes.login,
         );
       },
     );

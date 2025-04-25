@@ -38,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _finishOnboarding() {
     SharedPreference.setBool(key: "onboarding", value: true);
-    Navigator.pushReplacementNamed(context, '/login');
+    Navigator.pushReplacementNamed(context, 'login');
   }
 
   bool get isLastPage => currentIndex == onboardingViews.length - 1;
@@ -46,62 +46,57 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 24.h),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              flex: 13,
+      body: Column(
+        spacing: 10.h,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                Expanded(
+                  child: PageView.builder(
+                    controller: _pageController,
+                    physics: const BouncingScrollPhysics(),
+                    onPageChanged:
+                        (index) => setState(() => currentIndex = index),
+                    itemCount: onboardingViews.length,
+                    itemBuilder:
+                        (context, index) =>
+                            OnboardingView(onboardingViews[index]),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    onboardingViews.length,
+                    (i) => DotIndicator(isSelected: currentIndex == i),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 95.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 32.w),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    flex: 9,
-                    child: PageView.builder(
-                      controller: _pageController,
-                      physics: const BouncingScrollPhysics(),
-                      onPageChanged:
-                          (index) => setState(() => currentIndex = index),
-                      itemCount: onboardingViews.length,
-                      itemBuilder:
-                          (context, index) =>
-                              OnboardingView(onboardingViews[index]),
-                    ),
+                  Buttons.fill(
+                    onPressed: isLastPage ? _finishOnboarding : _goToNextPage,
+                    label: isLastPage ? "Get Started" : "Next",
                   ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        onboardingViews.length,
-                        (i) => DotIndicator(isSelected: currentIndex == i),
+                  isLastPage
+                      ? Buttons.text(onPressed: null, label: "")
+                      : Buttons.text(
+                        label: "Skip",
+                        onPressed: _finishOnboarding,
                       ),
-                    ),
-                  ),
                 ],
               ),
             ),
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 32.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Buttons.fill(
-                      onPressed: isLastPage ? _finishOnboarding : _goToNextPage,
-                      label: isLastPage ? "Get Started" : "Next",
-                    ),
-                    if (!isLastPage)
-                      Buttons.text(onPressed: _finishOnboarding, label: "Skip")
-                    else
-                      Buttons.text(onPressed: null, label: ""),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
