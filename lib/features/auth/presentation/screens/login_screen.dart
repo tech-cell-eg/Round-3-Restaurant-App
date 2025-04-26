@@ -12,7 +12,6 @@ class LoginScreen extends StatelessWidget {
         title: "Login",
         subtitle: "Welcome back! Please login to your account.",
         form: SingleChildScrollView(child: LoginForm()),
-        formHeightRatio: 0.66,
       ),
     );
   }

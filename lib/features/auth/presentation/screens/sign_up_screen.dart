@@ -13,7 +13,6 @@ class SignUpScreen extends StatelessWidget {
         title: "Sign Up",
         subtitle: "Please sign up to get started",
         form: const SignUpForm(),
-        formHeightRatio: 0.66,
       ),
     );
   }

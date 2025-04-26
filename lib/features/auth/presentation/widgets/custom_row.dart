@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class CustomRow extends StatelessWidget {
@@ -71,9 +73,7 @@ class CustomRow2 extends StatelessWidget {
           onPressed: onPressed,
           child: Text(
             textButtonText,
-            style: AppTextStyle.title.copyWith(
-              color: AppColor.kPrimaryColor,
-            ),
+            style: AppTextStyle.title.copyWith(color: AppColor.kPrimaryColor),
           ),
         ),
       ],
@@ -81,40 +81,43 @@ class CustomRow2 extends StatelessWidget {
   }
 }
 
-class CustomRow3 extends StatelessWidget {
-  final String image1;
-  final String image2;
-  final String image3;
-  final double size;
-
-  const CustomRow3({
-    super.key,
-    required this.image1,
-    required this.image2,
-    required this.image3,
-    this.size = 100,
-  });
+class SocialLoginOption extends StatelessWidget {
+  const SocialLoginOption({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      spacing: 10.w,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildCircularSvg(image1),
-        SizedBox(width: size * 0.2), // Add some spacing between circles
-        _buildCircularSvg(image2),
-        SizedBox(width: size * 0.2),
-        _buildCircularSvg(image3),
+        _buildCircularIcon(
+          path: AppImages.assetsIconsAuthFacebook,
+          color: Color.fromRGBO(57, 89, 152, 1),
+        ),
+        _buildCircularIcon(
+          path: AppImages.assetsIconsAuthTwitter,
+          color: Color.fromRGBO(22, 156, 232, 1),
+        ),
+        _buildCircularIcon(
+          path: AppImages.assetsIconsAuthApple,
+          color: Color.fromRGBO(27, 31, 47, 1),
+        ),
       ],
     );
   }
 
-  Widget _buildCircularSvg(String imagePath) {
-    return Container(
-      width: 80,
-      height: 80,
-      decoration: BoxDecoration(shape: BoxShape.circle),
-      child: ClipOval(child: SvgPicture.asset(imagePath, fit: BoxFit.cover)),
+  Widget _buildCircularIcon({required String path, required Color color}) {
+    return CircleAvatar(
+      radius: 35,
+      backgroundColor: color,
+      child: Center(
+        child: SvgPicture.asset(
+          path,
+          width: 25.w,
+          height: 25.h,
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }

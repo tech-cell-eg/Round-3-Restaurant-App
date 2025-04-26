@@ -1,5 +1,5 @@
-import 'package:food_app/features/restaurant/model/meal.dart';
-import 'package:food_app/features/restaurant/model/restaurant.dart';
+import 'package:food_app/features/client/restaurant/model/meal.dart';
+import 'package:food_app/features/client/restaurant/model/restaurant.dart';
 
 final List<Restaurant> restaurants = [
   Restaurant(

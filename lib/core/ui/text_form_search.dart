@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_app/core/utils/app_color.dart';
+import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 
 class TextFormSearch extends StatelessWidget {
@@ -16,10 +17,13 @@ class TextFormSearch extends StatelessWidget {
         labelStyle: AppTextStyle.description.copyWith(
           color: AppColor.kItemColor,
         ),
-        prefixIcon: Icon(
-          FontAwesomeIcons.magnifyingGlass,
-          color: AppColor.kItemColor,
+        prefixIcon: SvgPicture.asset(
+          AppImages.assetsIconsSearch,
+          colorFilter: ColorFilter.linearToSrgbGamma(),
+          width: 20,
+          height: 20,
         ),
+        // Icon(FontAwesomeIcons.magnifyingGlass, color: AppColor.kItemColor),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColor.kItemColor, width: 1.0),

@@ -13,7 +13,6 @@ class ForgetPassword extends StatelessWidget {
         title: "Forget Password ",
         subtitle: "Please sign in to your existing account",
         form: const ForgetPasswordForm(),
-        formHeightRatio: 0.66,
       ),
     );
   }

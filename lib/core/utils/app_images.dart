@@ -6,9 +6,25 @@ class AppImages {
   /// assets/icons/addProduct.svg
   static const String assetsIconsAddProduct = "assets/icons/addProduct.svg";
 
-  /// Assets for assetsIconsAppleIcon
-  /// assets/icons/appleIcon.svg
-  static const String assetsIconsAppleIcon = "assets/icons/appleIcon.svg";
+  /// Assets for assetsIconsAuthApple
+  /// assets/icons/auth/apple.svg
+  static const String assetsIconsAuthApple = "assets/icons/auth/apple.svg";
+
+  /// Assets for assetsIconsAuthEllipse
+  /// assets/icons/auth/ellipse.svg
+  static const String assetsIconsAuthEllipse = "assets/icons/auth/ellipse.svg";
+
+  /// Assets for assetsIconsAuthFacebook
+  /// assets/icons/auth/facebook.svg
+  static const String assetsIconsAuthFacebook = "assets/icons/auth/facebook.svg";
+
+  /// Assets for assetsIconsAuthTwitter
+  /// assets/icons/auth/twitter.svg
+  static const String assetsIconsAuthTwitter = "assets/icons/auth/twitter.svg";
+
+  /// Assets for assetsIconsAuthVector
+  /// assets/icons/auth/vector.svg
+  static const String assetsIconsAuthVector = "assets/icons/auth/vector.svg";
 
   /// Assets for assetsIconsBack
   /// assets/icons/back.svg
@@ -66,6 +82,10 @@ class AppImages {
   /// assets/icons/cross.svg
   static const String assetsIconsCross = "assets/icons/cross.svg";
 
+  /// Assets for assetsIconsDashboard
+  /// assets/icons/dashboard.svg
+  static const String assetsIconsDashboard = "assets/icons/dashboard.svg";
+
   /// Assets for assetsIconsDelete
   /// assets/icons/delete.svg
   static const String assetsIconsDelete = "assets/icons/delete.svg";
@@ -82,9 +102,9 @@ class AppImages {
   /// assets/icons/eye.svg
   static const String assetsIconsEye = "assets/icons/eye.svg";
 
-  /// Assets for assetsIconsFacebook
-  /// assets/icons/facebook.svg
-  static const String assetsIconsFacebook = "assets/icons/facebook.svg";
+  /// Assets for assetsIconsEyeOff
+  /// assets/icons/eye-off.svg
+  static const String assetsIconsEyeOff = "assets/icons/eye-off.svg";
 
   /// Assets for assetsIconsFavorite
   /// assets/icons/favorite.svg
@@ -102,17 +122,13 @@ class AppImages {
   /// assets/icons/home.svg
   static const String assetsIconsHome = "assets/icons/home.svg";
 
-  /// Assets for assetsIconsHomeChef
-  /// assets/icons/homeChef.svg
-  static const String assetsIconsHomeChef = "assets/icons/homeChef.svg";
-
   /// Assets for assetsIconsInfo
   /// assets/icons/info.svg
   static const String assetsIconsInfo = "assets/icons/info.svg";
 
-  /// Assets for assetsIconsLogoFood
-  /// assets/icons/logoFood.svg
-  static const String assetsIconsLogoFood = "assets/icons/logoFood.svg";
+  /// Assets for assetsIconsLogo
+  /// assets/icons/logo.svg
+  static const String assetsIconsLogo = "assets/icons/logo.svg";
 
   /// Assets for assetsIconsLogout
   /// assets/icons/logout.svg
@@ -122,17 +138,13 @@ class AppImages {
   /// assets/icons/map.svg
   static const String assetsIconsMap = "assets/icons/map.svg";
 
-  /// Assets for assetsIconsMarketIcon
-  /// assets/icons/marketIcon.svg
-  static const String assetsIconsMarketIcon = "assets/icons/marketIcon.svg";
+  /// Assets for assetsIconsMarket
+  /// assets/icons/market.svg
+  static const String assetsIconsMarket = "assets/icons/market.svg";
 
   /// Assets for assetsIconsMenu
   /// assets/icons/menu.svg
   static const String assetsIconsMenu = "assets/icons/menu.svg";
-
-  /// Assets for assetsIconsMenuChef
-  /// assets/icons/menuChef.svg
-  static const String assetsIconsMenuChef = "assets/icons/menuChef.svg";
 
   /// Assets for assetsIconsMessage
   /// assets/icons/message.svg
@@ -150,21 +162,17 @@ class AppImages {
   /// assets/icons/more.svg
   static const String assetsIconsMore = "assets/icons/more.svg";
 
-  /// Assets for assetsIconsMoreVector
-  /// assets/icons/more_vector.svg
-  static const String assetsIconsMoreVector = "assets/icons/more_vector.svg";
-
-  /// Assets for assetsIconsNotefication
-  /// assets/icons/notefication.svg
-  static const String assetsIconsNotefication = "assets/icons/notefication.svg";
+  /// Assets for assetsIconsMoreHorizontal
+  /// assets/icons/more-horizontal.svg
+  static const String assetsIconsMoreHorizontal = "assets/icons/more-horizontal.svg";
 
   /// Assets for assetsIconsNotification
   /// assets/icons/notification.svg
   static const String assetsIconsNotification = "assets/icons/notification.svg";
 
-  /// Assets for assetsIconsNumberoforder
-  /// assets/icons/numberoforder.svg
-  static const String assetsIconsNumberoforder = "assets/icons/numberoforder.svg";
+  /// Assets for assetsIconsOrder
+  /// assets/icons/order.svg
+  static const String assetsIconsOrder = "assets/icons/order.svg";
 
   /// Assets for assetsIconsPlus
   /// assets/icons/plus.svg
@@ -242,6 +250,10 @@ class AppImages {
   /// assets/icons/share.svg
   static const String assetsIconsShare = "assets/icons/share.svg";
 
+  /// Assets for assetsIconsShoppingBag
+  /// assets/icons/shopping-bag.svg
+  static const String assetsIconsShoppingBag = "assets/icons/shopping-bag.svg";
+
   /// Assets for assetsIconsSmile
   /// assets/icons/smile.svg
   static const String assetsIconsSmile = "assets/icons/smile.svg";
@@ -254,10 +266,6 @@ class AppImages {
   /// assets/icons/tag.svg
   static const String assetsIconsTag = "assets/icons/tag.svg";
 
-  /// Assets for assetsIconsTwitter
-  /// assets/icons/twitter.svg
-  static const String assetsIconsTwitter = "assets/icons/twitter.svg";
-
   /// Assets for assetsIconsUnderArrow
   /// assets/icons/under-arrow.svg
   static const String assetsIconsUnderArrow = "assets/icons/under-arrow.svg";
@@ -265,14 +273,6 @@ class AppImages {
   /// Assets for assetsIconsUser
   /// assets/icons/user.svg
   static const String assetsIconsUser = "assets/icons/user.svg";
-
-  /// Assets for assetsIconsUserIcon
-  /// assets/icons/userIcon.svg
-  static const String assetsIconsUserIcon = "assets/icons/userIcon.svg";
-
-  /// Assets for assetsIconsVector
-  /// assets/icons/vector.svg
-  static const String assetsIconsVector = "assets/icons/vector.svg";
 
   /// Assets for assetsIconsVectorWithLogo
   /// assets/icons/vectorWithLogo.svg

@@ -1,44 +1,50 @@
-// import 'package:food_app/features/chef_home/presention/views/widgets/bottom_sheets.dart';
 import 'package:food_app/empty.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/features/address/screen/adrees_screen.dart';
-import 'package:food_app/features/auth/presentation/screens/forget_password.dart';
+import 'package:food_app/features/client/cart/screen/cart_screen.dart';
+import 'package:food_app/features/client/onboarding/onboarding_screen.dart';
+import 'package:food_app/features/client/address/screen/address_screen.dart';
 import 'package:food_app/features/auth/presentation/screens/login_screen.dart';
+import 'package:food_app/features/client/home/presentation/view/home_view.dart';
+import 'package:food_app/features/client/menu/presentation/view/menu_view.dart';
+import 'package:food_app/features/auth/presentation/screens/verify_screen.dart';
 import 'package:food_app/features/auth/presentation/screens/sign_up_screen.dart';
-import 'package:food_app/features/auth/presentation/screens/verifiy_screen.dart';
-import 'package:food_app/features/cheef_menu/presention/views/cheef_view.dart';
-import 'package:food_app/features/chef_home/presention/views/chef_home_view.dart';
-import 'package:food_app/features/food_burger/presentation/views/food_burger_view.dart';
-import 'package:food_app/features/home/presentation/view/home_view.dart';
-import 'package:food_app/features/menu/presention/view/menu_view.dart';
-import 'package:food_app/features/my_cart/screen/cart_screen.dart';
-import 'package:food_app/features/order/presentation/screens/order_screen.dart';
-import 'package:food_app/features/profile/presentation/profile_edit_screen.dart';
-import 'package:food_app/features/profile/presentation/profile_screen.dart';
-import 'package:food_app/features/review/presention/views/review.view.dart';
-import 'package:food_app/features/search/presentation/view/search_view.dart';
-import 'package:food_app/features/onboarding/onboarding_screen.dart';
+import 'package:food_app/features/auth/presentation/screens/forget_password.dart';
+import 'package:food_app/features/client/profile/presentation/profile_screen.dart';
+import 'package:food_app/features/client/search/presentation/view/search_view.dart';
+import 'package:food_app/features/client/review/presentation/views/review.view.dart';
+import 'package:food_app/features/admin/chef_menu/presentation/views/chef_view.dart';
+import 'package:food_app/features/client/order/presentation/screens/order_screen.dart';
+import 'package:food_app/features/client/profile/presentation/profile_edit_screen.dart';
+import 'package:food_app/features/admin/chef_home/presentation/views/chef_home_view.dart';
+import 'package:food_app/features/client/food_burger/presentation/views/food_burger_view.dart';
 
 class Routes {
-  static const home = "home";
-  static const empty = "empty";
-  static const login = "login";
-  static const signup = "signup";
-  static const forgotPassword = "forgot_password";
-  static const verifyEmail = "verify_email";
-  static const search = "search";
-  static const onboard = "onboard";
-  static const foodBurger = "food_burger";
-  // static const bottom = "bottom";
-  static const menu = "menu";
-  static const String chefMenu = "chef_menu";
-  static const String review = "review";
-  static const String chefHome = "chefHome";
+  
+  /* General */
+  static const String empty = "empty";
+  static const String onboard = "onboard";
+  
+  /* Authentication */
+  static const String login = "login";
+  static const String signup = "signup";
+  static const String verifyEmail = "verify-email";
+  static const String forgotPassword = "forgot-password";
+
+  /* Client */
+  static const String cart = "cart";
+  static const String search = "search";
+  static const String myOrder = "order";
   static const String address = "address";
-  static const String myCart = "myCart";
-  static const String myOrder = "myOrder";
   static const String profile = "profile";
+  static const String chefMenu = "chef-menu";
+  static const String foodBurger = "food-burger";
   static const String editProfile = "edit-profile";
+
+  /* Chef */
+  static const String menu = "menu";
+  static const String home = "home";
+  static const String review = "review";
+  static const String chefHome = "chef-home";
 
   static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -48,8 +54,6 @@ class Routes {
         return MaterialPageRoute(builder: (_) => ChefHomeView());
       case review:
         return MaterialPageRoute(builder: (_) => ReviewView());
-      // case bottom:
-      //   return MaterialPageRoute(builder: (_) => SlidingBottomSheetOrders());
       case empty:
         return MaterialPageRoute(builder: (_) => EmptyScreen());
       case foodBurger:
@@ -65,12 +69,12 @@ class Routes {
       case forgotPassword:
         return MaterialPageRoute(builder: (_) => ForgetPassword());
       case verifyEmail:
-        return MaterialPageRoute(builder: (_) => VerifiyScreen());
+        return MaterialPageRoute(builder: (_) => VerifyScreen());
       case home:
         return MaterialPageRoute(builder: (_) => HomeView());
       case address:
         return MaterialPageRoute(builder: (_) => AddressListScreen());
-      case myCart:
+      case cart:
         return MaterialPageRoute(builder: (_) => CartScreen());
       case myOrder:
         return MaterialPageRoute(builder: (_) => MyOrdersScreen());
