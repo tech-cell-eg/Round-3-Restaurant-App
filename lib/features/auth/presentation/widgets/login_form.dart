@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/core/constants/routes.dart';
-import 'package:food_app/core/ui/buttons.dart';
 import 'package:food_app/core/ui/inputs.dart';
+import 'package:food_app/core/ui/buttons.dart';
 import 'package:food_app/core/utils/app_color.dart';
-import 'package:food_app/core/utils/app_images.dart';
+import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/features/auth/presentation/widgets/custom_row.dart';
 
 class LoginForm extends StatelessWidget {
@@ -14,6 +14,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
+        spacing: 5.h,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 5),
@@ -23,9 +24,7 @@ class LoginForm extends StatelessWidget {
             hint: "Enter your email",
             keyboardType: TextInputType.emailAddress,
           ),
-          const SizedBox(height: 5),
           PasswordInputField(label: "Password", hint: "Enter your password"),
-          const SizedBox(height: 5),
           CustomRow(
             onPressed: () {
               Navigator.pushNamed(context, Routes.forgotPassword);
@@ -33,14 +32,12 @@ class LoginForm extends StatelessWidget {
             textButtonText: "Forgot Password?",
             checkboxText: "Remember me",
           ),
-          const SizedBox(height: 5),
           Buttons.fill(
             onPressed: () {
               Navigator.pushReplacementNamed(context, Routes.home);
             },
             label: "Login",
           ),
-          const SizedBox(height: 5),
           CustomRow2(
             onPressed: () {
               Navigator.pushNamed(context, Routes.signup);
@@ -48,7 +45,6 @@ class LoginForm extends StatelessWidget {
             textButtonText: "Sign Up",
             text: "Don't have an account?",
           ),
-          const SizedBox(height: 5),
           Center(
             child: Text(
               "Or",
@@ -58,13 +54,7 @@ class LoginForm extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 5),
-          const CustomRow3(
-            image1: AppImages.assetsIconsFacebook,
-            image2: AppImages.assetsIconsTwitter,
-            image3: AppImages.assetsIconsAppleIcon,
-          ),
-          const SizedBox(height: 5),
+          const SocialLoginOption(),
           CustomRow2(
             onPressed: () {
               Navigator.pushReplacementNamed(context, Routes.chefHome);

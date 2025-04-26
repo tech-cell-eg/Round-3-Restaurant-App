@@ -18,7 +18,16 @@ class CustomIconImageAvatar extends StatelessWidget {
     return CircleAvatar(
       radius: 20,
       backgroundColor: backColor,
-      child: SvgPicture.asset(image, color: colorImage ?? AppColor.kBlackColor),
+      child: SvgPicture.asset(
+        image,
+        colorFilter: ColorFilter.mode(
+          colorImage ?? AppColor.kWhiteColor,
+          BlendMode.srcIn,
+        ),
+        width: 20,
+        height: 20,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

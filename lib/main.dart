@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:device_preview/device_preview.dart';
+// import 'package:hydrated_bloc/hydrated_bloc.dart';
+// import 'package:path_provider/path_provider.dart';
 import 'package:food_app/core/constants/routes.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/helper/shared_preference.dart';
@@ -12,12 +11,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await SharedPreference.initialize();
-  HydratedBloc.storage = await HydratedStorage.build(
-    storageDirectory: HydratedStorageDirectory(
-      (await getTemporaryDirectory()).path,
-    ),
-  );
-  runApp(DevicePreview(enabled: true, builder: (context) => const MyApp()));
+  // HydratedBloc.storage = await HydratedStorage.build(
+  //   storageDirectory: HydratedStorageDirectory(
+  //     (await getTemporaryDirectory()).path,
+  //   ),
+  // );
+  runApp(const MyApp());
+  // runApp(DevicePreview(enabled: true, builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

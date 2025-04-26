@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_app/features/chat/cubit/chat_state.dart';
 import 'package:food_app/features/chat/data/model/message.dart';
 import 'package:food_app/features/chat/data/repositories/chat_repository.dart';

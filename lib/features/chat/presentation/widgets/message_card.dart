@@ -18,7 +18,6 @@ class MessageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("debug-chat: message-card: $index | ID: ${message.id}");
     return !isSender
         ? _SenderMessageCard(
           message,

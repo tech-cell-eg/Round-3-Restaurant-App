@@ -11,11 +11,11 @@ class BadgeCount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, Routes.myCart),
+      onTap: () => Navigator.pushNamed(context, Routes.cart),
       child: Stack(
         children: [
           CustomIconImageAvatar(
-            image: AppImages.assetsIconsMarketIcon,
+            image: AppImages.assetsIconsMarket,
             colorImage: AppColor.kWhiteColor,
             backColor: AppColor.kPrimaryDark,
           ),
