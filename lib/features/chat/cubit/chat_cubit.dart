@@ -14,6 +14,7 @@ class ChatCubit extends Cubit<ChatState> {
     listenOnChatMessages();
   }
 
+
   void listenOnChatMessages() {
     emit(ChatLoading());
     try {
@@ -26,6 +27,7 @@ class ChatCubit extends Cubit<ChatState> {
     }
   }
 
+
   Future<void> sendMessage(Map<String, dynamic> payload) async {
     try {
       await _chatRepository.sendMessage(_chatId, payload);
@@ -33,6 +35,8 @@ class ChatCubit extends Cubit<ChatState> {
       emit(ChatError(e.toString()));
     }
   }
+
+
 
   @override
   Future<void> close() {
