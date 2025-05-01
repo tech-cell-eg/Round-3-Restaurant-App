@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_app/core/ui/cached_network_image.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
+import 'package:food_app/features/client/home/data/model/categpry_model.dart';
 
 class ItemPopularFastFood extends StatelessWidget {
-  const ItemPopularFastFood({super.key});
-
+  const ItemPopularFastFood({super.key, required this.categoryModel});
+  final CategoryModel categoryModel;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -30,7 +32,7 @@ class ItemPopularFastFood extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    "European Pizza",
+                    categoryModel.name,
                     style: AppTextStyle.subTitle.copyWith(fontSize: 15.sp),
                   ),
                   Text(
@@ -45,11 +47,11 @@ class ItemPopularFastFood extends StatelessWidget {
           ),
           ClipRRect(
             borderRadius: BorderRadius.circular(12.r),
-            child: Image.asset(
-              AppImages.assetsImagesPizza,
+            child: CustomCachedNetWorkImage(
+             image:  categoryModel.imageUrl,
               height: 84.h,
               width: 122.w,
-            ),
+              imageError: AppImages.assetsImagesPizza)
           ),
         ],
       ),

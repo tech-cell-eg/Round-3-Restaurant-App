@@ -13,24 +13,30 @@ class GridViewMealCard extends StatelessWidget {
       spacing: 24.h,
       children: [
         TitleSection(title: "Popular Burgers"),
-                
-        GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 0.7.h,
-            crossAxisSpacing: 10.w,
-            mainAxisSpacing: 0.0.h,
+
+        SizedBox(
+          height: 420.h,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            child: GridView.builder(
+              shrinkWrap: true,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 45.w, // المسافة الأفقية بين العناصر
+                mainAxisSpacing: 16.h, // المسافة العمودية بين العناصر
+                childAspectRatio: 0.7, // نسبة العرض إلى الارتفاع لكل عنصر
+              ),
+              itemBuilder: (context, index) {
+                return BurgerCard(
+                  image: allCategories[index].image,
+                  name: allCategories[index].name,
+                  restaurant: allCategories[index].category,
+                  price: allCategories[index].price,
+                );
+              },
+              itemCount: allCategories.length,
+            ),
           ),
-          itemBuilder: (context, index) {
-            return BurgerCard(
-              image:allCategories[index].image,
-              name: allCategories[index].name,
-              restaurant: allCategories[index].category,
-              price: allCategories[index].price,
-            );
-          },
-          itemCount: allCategories.length,
-          shrinkWrap: true,
         ),
       ],
     );

@@ -22,91 +22,102 @@ class BurgerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 160.h,
-      child: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          Positioned(
-            top: 40.h,
-            child: Card(
-              elevation: 0.1,
-              color: AppColor.kWhiteColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16.r),
-              ),
-              child: Container(
-                width: 153.w,
-                height: 140.h,
-                padding: EdgeInsets.only(top: 50.h, left: 10.w, right: 10.w),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      name,
-                      style: AppTextStyle.subTitle,
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      restaurant,
-                      style: AppTextStyle.description.copyWith(
-                        color: AppColor.kItemColor,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          '\$${price.toStringAsFixed(0)}',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          style: IconButton.styleFrom(
-                            padding: EdgeInsets.all(8),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            backgroundColor: Colors.orange,
-                          ),
-                          icon: Icon(Icons.add, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ],
+      height: 185.h,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 8.w,
+          vertical: 8.h,
+        ), // ضبط الـ padding داخل BurgerCard
+        child: Stack(
+          alignment: Alignment.topCenter,
+          clipBehavior: Clip.none,
+          children: [
+            Positioned(
+              top: 40.h,
+              child: Card(
+                elevation: 0.1,
+                color: AppColor.kWhiteColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16.r),
                 ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 0,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: CachedNetworkImage(
-                imageUrl: image,
-                height: 84.h,
-                width: 122.w,
-              
-                placeholder: (context, url) => Center(
-                  child: Shimmer.fromColors(
-                    baseColor: Colors.grey.shade300,
-                    highlightColor: Colors.grey.shade100,
-                    child: Container(
-                      width: 122.w,
-                      height: 87.h,
-                      color: Colors.white,
-                    ),
+                child: Container(
+                  width: 175.w,
+                  height: 140.h,
+                  padding: EdgeInsets.only(top: 50.h, left: 10.w, right: 10.w),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        name,
+                        style: AppTextStyle.subTitle.copyWith(
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        restaurant,
+                        style: AppTextStyle.description.copyWith(
+                          color: AppColor.kItemColor,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '\$${price.toStringAsFixed(0)}',
+                              style: AppTextStyle.subTitle,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              style: IconButton.styleFrom(
+                                padding: EdgeInsets.all(4),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                backgroundColor: Colors.orange,
+                              ),
+                              icon: Icon(Icons.add, color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                errorWidget: (context, url, error) => const Icon(Icons.broken_image,size: 80,),
-                fit: BoxFit.cover,
               ),
             ),
-          ),
-        ],
+            Positioned(
+              top: 0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: CachedNetworkImage(
+                  imageUrl: image,
+                  height: 84.h,
+                  width: 122.w,
+                  placeholder:
+                      (context, url) => Center(
+                        child: Shimmer.fromColors(
+                          baseColor: Colors.grey.shade300,
+                          highlightColor: Colors.grey.shade100,
+                          child: Container(
+                            width: 122.w,
+                            height: 87.h,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                  errorWidget:
+                      (context, url, error) =>
+                          const Icon(Icons.broken_image, size: 80),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

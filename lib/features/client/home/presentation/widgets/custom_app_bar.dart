@@ -20,6 +20,7 @@ class CustomAppBar extends StatelessWidget {
           onTap: () => Navigator.pushNamed(context, Routes.profile),
           child: CustomIconImageAvatar(
             image: AppImages.assetsIconsMenu,
+            colorImage: AppColor.kBlackColor,
             backColor: AppColor.kItemColor.withValues(alpha: 0.2),
           ),
         ),

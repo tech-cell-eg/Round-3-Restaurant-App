@@ -13,9 +13,7 @@ class CustomSearchAnchor extends StatelessWidget {
       child: SearchAnchor(
         builder: (BuildContext context, SearchController controller) {
           return TextFormSearch(
-            onTap: () {
-              controller.openView();
-            },
+         
           );
         },
         suggestionsBuilder: (
