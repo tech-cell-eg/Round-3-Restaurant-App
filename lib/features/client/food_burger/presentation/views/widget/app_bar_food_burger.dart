@@ -5,6 +5,7 @@ import 'package:food_app/core/ui/custom_icon_image_avatar.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
+import 'package:food_app/features/client/food_burger/presentation/views/widget/custom_drop_menu.dart';
 
 class AppBarFoodBurger extends StatelessWidget {
   const AppBarFoodBurger({super.key});
@@ -18,28 +19,7 @@ class AppBarFoodBurger extends StatelessWidget {
           image: AppImages.assetsIconsMenu,
           backColor: AppColor.kItemColor.withValues(alpha: 0.2),
         ),
-        Container(
-          width: 102.w,
-          height: 45.h,
-          decoration: BoxDecoration(
-            border: Border.all(width: 1.0, color: AppColor.kItemColor),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Burger", style: AppTextStyle.description),
-              SvgPicture.asset(
-                AppImages.assetsIconsUnderArrow,
-                colorFilter: const ColorFilter.mode(
-                  AppColor.kSecondaryColor,
-                  BlendMode.srcIn,
-                ),
-              ),
-            ],
-          ),
-        ),
+        CustomDropMenu(),
         Spacer(),
         CustomIconImageAvatar(
           image: AppImages.assetsIconsSearch,

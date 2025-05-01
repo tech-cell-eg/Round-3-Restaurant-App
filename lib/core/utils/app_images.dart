@@ -318,6 +318,10 @@ class AppImages {
   /// assets/images/food/restuarant.svg
   static const String assetsImagesFoodRestuarant = "assets/images/food/restuarant.svg";
 
+  /// Assets for assetsImagesFoodTopViewDeliciousFoodAssortment
+  /// assets/images/food/top-view-delicious-food-assortment.jpg
+  static const String assetsImagesFoodTopViewDeliciousFoodAssortment = "assets/images/food/top-view-delicious-food-assortment.jpg";
+
   /// Assets for assetsImagesFoodVegetables
   /// assets/images/food/vegetables.jpeg
   static const String assetsImagesFoodVegetables = "assets/images/food/vegetables.jpeg";

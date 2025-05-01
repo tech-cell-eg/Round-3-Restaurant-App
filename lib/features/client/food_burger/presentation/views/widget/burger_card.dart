@@ -1,7 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
+import 'package:shimmer/shimmer.dart';
 
 class BurgerCard extends StatelessWidget {
   final String image;
@@ -83,11 +85,24 @@ class BurgerCard extends StatelessWidget {
             top: 0,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                image,
-                width: 122.w,
+              child: CachedNetworkImage(
+                imageUrl: image,
                 height: 84.h,
-                fit: BoxFit.fill,
+                width: 122.w,
+              
+                placeholder: (context, url) => Center(
+                  child: Shimmer.fromColors(
+                    baseColor: Colors.grey.shade300,
+                    highlightColor: Colors.grey.shade100,
+                    child: Container(
+                      width: 122.w,
+                      height: 87.h,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                errorWidget: (context, url, error) => const Icon(Icons.broken_image,size: 80,),
+                fit: BoxFit.cover,
               ),
             ),
           ),

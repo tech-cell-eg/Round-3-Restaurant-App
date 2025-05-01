@@ -6,6 +6,7 @@ import 'package:food_app/core/constants/routes.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/features/auth/presentation/widgets/custom_row.dart';
+import 'package:food_app/features/client/home/data/data_source/remote_home_data_source.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -33,8 +34,8 @@ class LoginForm extends StatelessWidget {
             checkboxText: "Remember me",
           ),
           Buttons.fill(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, Routes.home);
+            onPressed: ()async {
+            Navigator.pushReplacementNamed(context, Routes.home);
             },
             label: "Login",
           ),

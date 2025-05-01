@@ -13,7 +13,7 @@ class DioConnection {
     _dio = Dio(
       BaseOptions(
         baseUrl:
-            "https://round-3-fruit-mobile-api.digital-vision-solutions.com/api/",
+            "https://fooddelivery.digital-vision-solutions.com/api/",
         // connectTimeout: const Duration(seconds: 10),
         // receiveTimeout: const Duration(seconds: 10),
         headers: {
@@ -29,6 +29,11 @@ class DioConnection {
     ));
   }
 
+
+
+
+
+
   Future<Map<String, dynamic>> get(String endpoint,
       {Map<String, dynamic>? data}) async {
     try {
@@ -42,6 +47,8 @@ class DioConnection {
       throw _handleError(e);
     }
   }
+
+
 
   Future<Map<String, dynamic>> post(String endpoint,
       {Map<String, dynamic>? data}) async {

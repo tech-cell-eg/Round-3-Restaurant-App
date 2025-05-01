@@ -1,15 +1,19 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_app/core/ui/cached_network_image.dart';
 import 'package:food_app/core/utils/app_color.dart';
 import 'package:food_app/core/utils/app_images.dart';
 import 'package:food_app/core/utils/app_text_style.dart';
 import 'package:food_app/dummy/restaurant.dart';
+import 'package:food_app/features/client/home/data/model/resturnat_model.dart';
 import 'package:food_app/features/client/home/presentation/widgets/icon_and_title.dart';
 import 'package:food_app/features/client/restaurant/presentation/restaurant_screen.dart';
 
 class CardItemOpenRestaurant extends StatelessWidget {
-  const CardItemOpenRestaurant({super.key});
+  const CardItemOpenRestaurant({super.key, required this.restaurantModel});
 
+  final RestaurantModel restaurantModel;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -30,11 +34,16 @@ class CardItemOpenRestaurant extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(10.r),
-              child: Image.asset(AppImages.assetsImagesFoodVegetables),
+              child: CustomCachedNetWorkImage(
+                image: restaurantModel.imageUrl,
+                height: 137.h,
+                width: double.infinity,
+                imageError: AppImages.assetsImagesFoodVegetables,
+              ),
             ),
-            Text("Rose garden restaurant", style: AppTextStyle.header),
+            Text(restaurantModel.name, style: AppTextStyle.header),
             Text(
-              'Burger - Chicken - Riche - Wings ',
+              restaurantModel.des,
               style: AppTextStyle.description.copyWith(
                 color: AppColor.kItemColor,
               ),
@@ -44,15 +53,15 @@ class CardItemOpenRestaurant extends StatelessWidget {
               children: [
                 IconImageAndTitle(
                   image: AppImages.assetsIconsStar,
-                  title: "4.7",
+                  title: "${restaurantModel.rating}",
                 ),
                 IconImageAndTitle(
                   image: AppImages.assetsIconsDelivery,
-                  title: "Free",
+                  title: "${restaurantModel.deliveryFees}",
                 ),
                 IconImageAndTitle(
                   image: AppImages.assetsIconsClock,
-                  title: "20 min",
+                  title: "${restaurantModel.deliveryTime}",
                 ),
               ],
             ),

@@ -7,7 +7,6 @@ import 'package:food_app/features/client/search/presentation/view/widgets/list_v
 import 'package:food_app/features/client/search/presentation/view/widgets/list_view_popular_fast_food.dart';
 import 'package:food_app/features/client/search/presentation/view/widgets/search_anchor.dart';
 
-
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
 
@@ -15,35 +14,37 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 24.r),
-      child: Column(
-        children: [
-          SizedBox(height: 20.h),
-          CustomAppBarSearch(),
-          SizedBox(height: 24.h),
-          CustomSearchAnchor(),
-          SizedBox(height: 24.h),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: TitleSection(title: "Recent Keywords"),
-          ),
-          SizedBox(height: 12.h),
-          ListViewItemKeyWords(),
-          SizedBox(height: 12.h),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: TitleSection(title: "Suggested Restaurants"),
-          ),
-          SizedBox(height: 12.h),
-          ListViewItemRestaurant(),
-          
-          SizedBox(height: 32.h),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: TitleSection(title: "Popular Fast food"),
-          ),
-          SizedBox(height: 27.h),
-          ListViewItemPopularFastFood(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 20.h),
+            CustomAppBarSearch(),
+            SizedBox(height: 24.h),
+            CustomSearchAnchor(),
+            SizedBox(height: 24.h),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: TitleSection(title: "Recent Keywords"),
+            ),
+            SizedBox(height: 12.h),
+            ListViewItemKeyWords(),
+            SizedBox(height: 12.h),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: TitleSection(title: "Suggested Restaurants"),
+            ),
+            SizedBox(height: 12.h),
+            ListViewItemRestaurant(),
+
+            SizedBox(height: 32.h),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: TitleSection(title: "Popular Fast food"),
+            ),
+            SizedBox(height: 27.h),
+            ListViewItemPopularFastFood(),
+          ],
+        ),
       ),
     );
   }

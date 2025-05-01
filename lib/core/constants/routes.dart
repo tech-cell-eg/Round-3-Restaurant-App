@@ -1,6 +1,11 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_app/empty.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/features/chat/data/data_source/remote_chat_data_source.dart';
 import 'package:food_app/features/client/cart/screen/cart_screen.dart';
+import 'package:food_app/features/client/home/cubit/category/category_cubit.dart';
+import 'package:food_app/features/client/home/data/data_source/base_home_data_source.dart';
+import 'package:food_app/features/client/home/data/repository/home_repository.dart';
 import 'package:food_app/features/client/onboarding/onboarding_screen.dart';
 import 'package:food_app/features/client/address/screen/address_screen.dart';
 import 'package:food_app/features/auth/presentation/screens/login_screen.dart';
@@ -19,11 +24,12 @@ import 'package:food_app/features/admin/chef_home/presentation/views/chef_home_v
 import 'package:food_app/features/client/food_burger/presentation/views/food_burger_view.dart';
 
 class Routes {
-  
+
+
   /* General */
   static const String empty = "empty";
   static const String onboard = "onboard";
-  
+
   /* Authentication */
   static const String login = "login";
   static const String signup = "signup";
@@ -46,7 +52,9 @@ class Routes {
   static const String review = "review";
   static const String chefHome = "chef-home";
 
-  static MaterialPageRoute onGenerateRoute(RouteSettings settings) {
+  Routes();
+
+  static MaterialPageRoute onGenerateRoute(RouteSettings settings,) {
     switch (settings.name) {
       case chefMenu:
         return MaterialPageRoute(builder: (_) => ChefMenuView());
@@ -71,7 +79,10 @@ class Routes {
       case verifyEmail:
         return MaterialPageRoute(builder: (_) => VerifyScreen());
       case home:
-        return MaterialPageRoute(builder: (_) => HomeView());
+        return MaterialPageRoute(
+          builder:
+              (_) => HomeView(),
+        );
       case address:
         return MaterialPageRoute(builder: (_) => AddressListScreen());
       case cart:
